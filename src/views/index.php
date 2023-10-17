@@ -10,7 +10,8 @@
     <title>Index</title>
 </head>
 <body>
-
+    <a href="/src/views/login.php">login</a>
+    <a href="/src/views/register.php">register</a>
     <script src="/public/script/script.js"></script>
 </body>
 </html>
