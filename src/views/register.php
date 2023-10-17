@@ -7,10 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/style.css">
-    <title>Error</title>
+    <title>Register</title>
 </head>
 <body>
-
+<div class="container-lg" id="login">
+        
+</div>
+</div>
     <script src="/public/script/script.js"></script>
 </body>
 </html>

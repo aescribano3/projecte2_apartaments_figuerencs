@@ -1,0 +1,20 @@
+body{
+    background-color:#2e2e2e ;
+}
+#login{
+    margin-top: 110px;
+    margin-bottom: auto;
+    background-color: #4b4bff;
+    height: 700px;
+    border-radius: 10px;
+}
+#login .col-md-5{
+    background-color: rgb(255, 255, 255);
+    border-color: #252525;
+    border-style: solid;
+    border-radius: 5px;
+}
+#login-title{
+    color: white;
+    margin-bottom: 20px;
+}
