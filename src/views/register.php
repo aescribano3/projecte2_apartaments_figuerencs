@@ -10,9 +10,37 @@
     <title>Register</title>
 </head>
 <body>
-<div class="container-lg" id="login">
-        
-</div>
+<div class="container-md shadow-lg px-5 py-5" id="register">
+    <h1 class="text-center mb-5 fw-bold" id="register-title">Crear una Compta</h1>
+    <form action="https://cendrassos.net" method="post">
+        <div class="row gx-6 gy-4 text-center justify-content-center">
+            <div class="col-md-4 shadow-lg">
+                <input type="text" class="form-control-plaintext" id="user-name" placeholder="Nom">
+            </div>
+            <div class="col-md-2"> </div>
+            <div class="col-md-4 shadow-lg">
+                <input type="text" class="form-control-plaintext" id="user-name" placeholder="Cognoms">
+            </div>
+            <div class="col-md-4 shadow-lg">
+                <input type="text" class="form-control-plaintext" id="user-name" placeholder="Numero de telefon">
+            </div>
+            <div class="col-md-2"> </div>
+            <div class="col-md-4 shadow-lg">
+                <input type="text" class="form-control-plaintext" id="user-name" placeholder="Correu electrònic">
+            </div>
+            <div class="col-md-10 shadow-lg">
+                <input type="password" class="form-control-plaintext" id="user-name" placeholder="Contrasenya">
+            </div>
+            <div class="col-md-10 shadow-lg">
+                <input type="password" class="form-control-plaintext" id="user-name" placeholder="Confirmar contrasenya">
+            </div>
+            <div class="col-md-10 shadow-lg">
+                <input type="text" class="form-control-plaintext" id="user-name" placeholder="Targeta de crèdit">
+            </div>
+            <button type="button" class="btn btn-dark btn-lg btn-block shadow-lg col-md-10" onclick="window.location.href='/src/controllers/index.php'">Cancelar</button>
+            <button type="submit" class="btn btn-success btn-lg btn-block shadow-lg col-md-10">Crear compte</button>
+        </div>
+    </form>
 </div>
     <script src="/public/script/script.js"></script>
 </body>
