@@ -12,7 +12,7 @@
 <body>
 <div class="container-md shadow-lg px-5 py-5" id="login">
     <h1 class="text-center mb-5 fw-bold" id="login-title">Iniciar Sessió</h1>
-    <form action="https://cendrassos.net" method="post">
+    <form action="https://cendrassos.net" method="POST">
         <div class="row gx-5 gy-4 text-center justify-content-center">
             <div class="col-md-8 shadow-lg">
                 <input type="text" class="form-control-plaintext" id="user-name" placeholder="Nom Usuari">
@@ -20,7 +20,7 @@
             <div class="col-md-8 shadow-lg">
                 <input type="text" class="form-control-plaintext" id="user-name" placeholder="Contraseña"> 
             </div>
-            <button type="button" class="btn btn-dark btn-lg btn-block shadow-lg col-md-8" onclick="window.location.href='/src/controllers/register.php'">Crear compta</button>
+            <button type="button" class="btn btn-dark btn-lg btn-block shadow-lg col-md-8" onclick="window.location.href='/public/index.php'">Cancelar</button>
             <button type="submit" class="btn btn-success btn-lg btn-block shadow-lg col-md-8">Iniciar sesió</button>
         </div>
     </form>

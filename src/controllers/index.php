@@ -1,3 +1,5 @@
 <?php
 
-include "../views/index.php";
+function ctrlIndex(){
+    include "../src/views/index.php";
+}

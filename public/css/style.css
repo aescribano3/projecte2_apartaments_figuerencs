@@ -5,7 +5,7 @@ body{
     margin-top: 110px;
     margin-bottom: auto;
     background-color: #4b4bff;
-    height: 500px;
+    height: auto;
     width: auto;
     border-radius: 10px;
 }
@@ -22,7 +22,7 @@ div.col-md-8{
     margin-top: 110px;
     margin-bottom: auto;
     background-color: #4b4bff;
-    height: 700px;
+    height: auto;
     width: auto;
     border-radius: 10px;
 }
@@ -39,5 +39,8 @@ div.col-md-10{
     border-radius: 5px;
 }
 #register-title{
+    color: white;
+}
+p{
     color: white;
 }
