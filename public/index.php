@@ -9,6 +9,7 @@ include "../src/controllers/index.php";
 include "../src/controllers/error.php";
 include "../src/controllers/register.php";
 include "../src/controllers/user.php";
+include "../src/controllers/pujarapartament.php";
 
 $r = $_REQUEST["r"];
 
@@ -20,6 +21,8 @@ if ($r === "login") {
     ctrlRegister();
 } elseif ($r == "user") {
     ctrlUser();
+} elseif ($r == "pujar") {
+    ctrlPujar();
 } elseif ($r == "") {
     ctrlIndex();
 } else {
