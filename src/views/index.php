@@ -10,8 +10,12 @@
     <title>Index</title>
 </head>
 <body>
-    <a href="/src/controllers/login.php">login</a>
-    <a href="/src/controllers/register.php">register</a>
+    <a class="nav-link" href="Index.php?r=login"><p>Login</p></a>
+    <a class="nav-link" href="Index.php?r=register"><p>Register</p></a>
+    <a class="nav-link" href="Index.php?r="><p>Index</p></a>
+    <a class="nav-link" href="Index.php?r=content"><p>Content</p></a>
+    <a class="nav-link" href="Index.php?r=user"><p>User</p></a>
+    <a class="nav-link" href="Index.php?r=error"><p>Error</p></a>
     <script src="/public/script/script.js"></script>
 </body>
 </html>

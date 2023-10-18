@@ -1,3 +1,5 @@
 <?php
 
-include "../views/register.php";
+function ctrlRegister(){
+    include "../src/views/register.php";
+}
