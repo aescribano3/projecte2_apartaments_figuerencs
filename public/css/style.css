@@ -47,3 +47,6 @@ p{
 #logo{
     width: 75px;
 }
+ol, ul {
+    padding-left: 0rem;
+}
