@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <title>Index</title>
-</head>
-<body>
-
-<footer class ="bg-ligth mt-3 fixed-bottom" style="background-color: #000099">
+<footer class ="bg-ligth mt-5" style="background-color: #000099">
     <div class="container">
-        <a class="navbar-brand d-flex justify-content-center" href="#">
+        <a class="navbar-brand d-flex justify-content-center" href="/public/index.php?r=">
             <img src="/public/img/logo_renting.png" alt="logo" id="logo" width="50" height="50" class="mt-4">
         </a>
     <hr class="my-4 text-white">
@@ -38,10 +25,3 @@
       </div>
     </div>
   </footer>
-
-
-    <script src="/public/script/script.js"></script>
-</body>
-</html>
-
-

@@ -11,9 +11,9 @@
     <title>Index</title>
 </head>
 <body>
-    <?php include("header.php"); ?>
-    
-    <?php include("footer.php"); ?>
+    <?php include("header.php");?>
+
+    <?php include("footer.php");?>
     <script src="/public/script/script.js"></script>
 </body>
 </html>
