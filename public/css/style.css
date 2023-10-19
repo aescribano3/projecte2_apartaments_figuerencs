@@ -1,5 +1,8 @@
 body{
     background-color:#2e2e2e ;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 #login{
     margin-top: 110px;
