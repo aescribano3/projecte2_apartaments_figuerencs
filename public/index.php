@@ -11,7 +11,10 @@ include "../src/controllers/register.php";
 include "../src/controllers/user.php";
 include "../src/controllers/pujarapartament.php";
 
-$r = $_REQUEST["r"];
+$r = '';
+if(isset($_REQUEST["r"])){
+   $r = $_REQUEST["r"];
+}
 
 if ($r === "login") {
     ctrlLogin();
