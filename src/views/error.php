@@ -11,7 +11,16 @@
     <title>Error</title>
 </head>
 <body>
+    <?php include("header.php"); ?>
+    
 
+    <div class="container text-center">
+        <img src="/public/img/error.png" alt="Error" class="mt-5 mb-5">
+        <h1 class="text-light">Ops... algo salio
+        <small class="text-danger">mal</small>
+        </h1>
+    </div>
+    <?php include("footer.php"); ?>
     <script src="/public/script/script.js"></script>
 </body>
 </html>
