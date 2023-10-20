@@ -27,9 +27,5 @@
         </div>
       </li>
     </ul>
-    <form class="d-flex me-3">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
   </div>
 </nav>
