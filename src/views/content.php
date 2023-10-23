@@ -78,7 +78,7 @@
         </div>
     </div>
 
-<!-- Form -->
+<!-- Formul -->
     <div class="col-3 mt-2">
     <form action="https://www.fotocasa.es/es/" method="POST">
         <div class="row gx-5 gy-4 text-center justify-content-center">
@@ -88,12 +88,12 @@
             <div class="col-md-8 shadow-lg">
                 <input type="text" class="form-control-plaintext" id="user-name" placeholder="Telefon"> 
             </div>
-            <div class="mb-3">
-                                    <label for="from">Data Inici</label>
-                                    <input type="text" id="from" name="from" class="form-control mb-3">
-                                    <label for="to">Data Final</label>
-                                    <input type="text" id="to" name="to" class="form-control">
-                                </div>
+            <div class="col-md-8">
+                  <label for="from">Data Inici</label>
+                  <input type="text" id="from" name="from" class="form-control mb-3">
+                  <label for="to">Data Final</label>
+                  <input type="text" id="to" name="to" class="form-control">
+            </div>
             <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
         </div>
     </form>   
