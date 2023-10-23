@@ -44,3 +44,15 @@ div.col-md-10{
 #register-title{
     color: white;
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #1f1f1f;
+}
+::-webkit-scrollbar-thumb {
+    background: #0e4bce;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
