@@ -9,23 +9,30 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
       <li class="nav-item active">
-        <a class="nav-link" href="/public/index.php?r=">Home <span class="sr-only"></span></a>
+        <a class="nav-link" href="/public/index.php?r=content">Contingut <span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/public/index.php?r=">Features</a>
+        <a class="nav-link" href="/public/index.php?r=pujar">Pujar Apartament</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/public/index.php?r=">Pricing</a>
+        <a class="nav-link" href="/public/index.php?r=error">Error</a>
       </li>
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Usuari
           </a>
           <ul class="dropdown-menu">
-          <a class="dropdown-item" href="/public/index.php?r=login">Login</a>
-          <a class="dropdown-item" href="/public/index.php?r=register">Register</a>
+            <a class="dropdown-item" href="/public/index.php?r=login">Login</a>
+            <a class="dropdown-item" href="/public/index.php?r=register">Register</a>
+          </ul>
         </div>
       </li>
     </ul>
+    <span class="navbar-text">
+      <a class="navbar-brand" href="/public/index.php?r=">
+        <img src="/public/img/default_logo_user.png" width="30" height="30" alt="user_logo" class="d-inline-block align-top ms-3">
+      </a>
+        <a class="nav-link" href="/public/index.php?r=user">Usuari</a>
+    </span>
   </div>
 </nav>
