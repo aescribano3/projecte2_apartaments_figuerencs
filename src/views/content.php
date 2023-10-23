@@ -78,7 +78,7 @@
         </div>
     </div>
 
-<!-- Formul -->
+<!-- Form -->
     <div class="col-3 mt-2">
     <form action="https://www.fotocasa.es/es/" method="POST">
         <div class="row gx-5 gy-4 text-center justify-content-center">
