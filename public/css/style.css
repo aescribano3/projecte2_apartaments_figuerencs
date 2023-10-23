@@ -44,3 +44,12 @@ div.col-md-10{
 #register-title{
     color: white;
 }
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+    margin-top: -1300px;
+}
