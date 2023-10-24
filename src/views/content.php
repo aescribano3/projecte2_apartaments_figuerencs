@@ -43,7 +43,7 @@
   <!-- start col-8 -->
     <div class="col-8"> 
         <div class="col-12">
-            <p class="text-white display-5 ">345000€</p>
+        <h1 class="text-white ">450.000€</h1>
         </div>
         <div class="container-text">
             <p class="text-white">
@@ -51,7 +51,7 @@
             </p>
         </div>
         <div class="col-12">
-            <p class="text-white display-4">Caracteristicas</p>
+            <h1 class="text-white ">Característiques</h1>
         </div>
         <div class="row col-6">
             <div class="col-3">
@@ -82,6 +82,7 @@
     <div class="col-3 mt-2">
     <form action="https://www.fotocasa.es/es/" method="POST">
         <div class="row gx-5 gy-4 text-center justify-content-center">
+        <h2 class="text-white text-center">Reserva</h2>
             <div class="col-md-8 shadow-lg">
                 <input type="text" class="form-control-plaintext" id="user-name" placeholder="Mail">
             </div>

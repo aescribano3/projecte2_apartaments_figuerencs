@@ -65,3 +65,17 @@ div.col-md-10{
     background-size: 100% 100%;
     margin-top: -1300px;
 }
+
+
+#enlace-dades, #enlace-historial, #enlace-reserves {
+    margin-bottom: 150px; /* Ajusta el valor según la separación deseada */
+  }
+  #contenido-dades, #contenido-historial, #contenido-reserves {
+    display: none; /* Ocultar todos los elementos al principio */
+}
+#historial{
+    margin-bottom: 100px;
+}
+#userx{
+    background-color: #000099;
+}
