@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="icon" type="image/png" href="/public/img/logo_renting.png">
+    <link rel="icon" type="image/png" href="/img/logo_renting.png">
     <link rel="stylesheet" href="/css/style.css">
     <title>Index</title>
 </head>
@@ -23,13 +23,13 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/public/img/apartamento_portada_1.webp" class="d-block w-100" alt="apartament_1">
+                <img src="/img/apartamento_portada_1.webp" class="d-block w-100" alt="apartament_1">
             </div>
             <div class="carousel-item">
-                <img src="/public/img/apartamento_portada_2.jpg" class="d-block w-100" alt="apartament_2">
+                <img src="/img/apartamento_portada_2.jpg" class="d-block w-100" alt="apartament_2">
             </div>
             <div class="carousel-item">
-                <img src="/public/img/apartamento_portada_3.jpg" class="d-block w-100" alt="apartament_3">
+                <img src="/img/apartamento_portada_3.jpg" class="d-block w-100" alt="apartament_3">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -44,12 +44,12 @@
     <div class="container-md">
         <div class="row">
 
-            <a href="/public/index.php?r=" class="text-decoration-none">
+            <a href="/index.php?r=" class="text-decoration-none">
                 <div class="col-8">
                     <div class="card mb-3 mt-5" style="max-width: 800px;">
                         <div class="row g-0">
                             <div class="col-md-5">
-                            <img src="/public/img/apartamento_portada_1.webp" class="img-fluid rounded-start" alt="apartament">
+                            <img src="/img/apartamento_portada_1.webp" class="img-fluid rounded-start" alt="apartament">
                             </div>
                             <div class="col-md-7">
                             <div class="card-body">
@@ -66,7 +66,7 @@
             <div class="col-4 text-white mt-5 mb-5 text-center">
                 <div class="sticky-top" style="z-index: 1;">
                     <h4 class="mb-3">Cerca d'apartaments</h4>
-                    <form action="/public/index?r=" method="POST">
+                    <form action="/index?r=" method="POST">
                         <div class="row mb-3">
                             <div class="col-5">
                                 <div class="mb-3">
@@ -126,13 +126,13 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block col-md-12"><img src="/public/img/lupa_icon.png" alt="Buscar" width="30" height="30"></button>
+                        <button type="submit" class="btn btn-primary btn-block col-md-12"><img src="/img/lupa_icon.png" alt="Buscar" width="30" height="30"></button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
     <?php include("footer.php");?>
-    <script src="/public/script/script.js"></script>
+    <script src="/script/script.js"></script>
 </body>
 </html>

@@ -11,18 +11,18 @@ class Users {
     }
 
     public function getAll(){
-        $tasks = array();
-        $query = "select id, user, pass from usuari;";
-        foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $task) {
-            $tasks[] = $task;
+        $users = array();
+        $query = "select id, email, pass from usuari;";
+        foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $user) {
+            $users[] = $user;
         }
 
-        return $tasks;
+        return $users;
     }
 
-    public function login($user, $pass){
-        $stm = $this->sql->prepare('select id, user, pass from usuari where user=:user;');
-        $stm->execute([':user' => $user]);
+    public function login($email, $pass){
+        $stm = $this->sql->prepare('select id, email, pass from usuari where email=:email;');
+        $stm->execute([':email' => $email]);
         $result = $stm->fetch(\PDO::FETCH_ASSOC);
         if(is_array($result) && $result["pass"] == $pass){
             return $result;

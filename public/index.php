@@ -11,6 +11,8 @@ include "../src/controllers/error.php";
 include "../src/controllers/register.php";
 include "../src/controllers/user.php";
 include "../src/controllers/pujarapartament.php";
+include "../src/controllers/ctrlDoLogin.php";
+include "../src/controllers/ctrlDoLogout.php";
 
 include "../src/middleware/isLogged.php";
 
@@ -29,26 +31,22 @@ if(isset($_REQUEST["r"])){
 
 if ($r == "login") {
     ctrlLogin($request, $response, $container);
-} elseif ($r == "add") {
-    $response = isLogged($request, $response, $container, "ctrlAdd");
-} elseif ($r == "delete") {
-    $response = isLogged($request, $response, $container, "ctrlDelete");
 } elseif ($r === "content") {
-    $response = ctrlContent($request, $response, $container);
+    $response = isLogged($request, $response, $container,"ctrlContent");
 } elseif ($r == "register") {
-    $response = ctrlRegister($request, $response, $container);
+    $response = isLogged($request, $response, $container,"ctrlRegister");
 } elseif ($r == "user") {
-    $response = ctrlUser($request, $response, $container);
+    $response = isLogged($request, $response, $container,"ctrlUser");
 } elseif ($r == "pujar") {
-    $response = ctrlPujar($request, $response, $container);
+    $response = isLogged($request, $response, $container,"ctrlPujarApartament");
 } elseif ($r == "") {
     $response = isLogged($request, $response, $container, "ctrlIndex");
 } elseif ($r == "dologin") {
-    $response = ctrlDoLogin($request, $response, $container);
+    ctrlDoLogin($request, $response, $container);
 } elseif ($r == "dologout") {
-    $response = ctrlDoLogout($request, $response, $container);
+    ctrlDoLogout($request, $response, $container);
 } else {
-    ctrlError();
+    $response = isLogged($request, $response, $container,"ctrlContent");
 }
 
 $response->response();

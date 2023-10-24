@@ -1,7 +1,7 @@
 <footer class ="footer mt-auto py-3" style="background-color: #000099">
     <div class="container">
-        <a class="navbar-brand d-flex justify-content-center" href="/public/index.php?r=">
-            <img src="/public/img/logo_renting.png" alt="logo" id="logo" width="50" height="50" class="mt-4">
+        <a class="navbar-brand d-flex justify-content-center" href="/index.php?r=">
+            <img src="/img/logo_renting.png" alt="logo" id="logo" width="50" height="50" class="mt-4">
         </a>
     <hr class="my-4 text-white">
     <div class="row">
