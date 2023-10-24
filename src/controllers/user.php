@@ -1,5 +1,8 @@
 <?php
 
-function ctrlUser(){
-    include "../src/views/user.php";
+function ctrlUser($request, $response, $container){
+    
+    $response->setTemplate("user.php");
+
+    return $response;
 }

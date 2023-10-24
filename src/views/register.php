@@ -16,7 +16,7 @@
 <body>
 <div class="container-md shadow-lg px-5 py-5" id="register">
     <h1 class="text-center mb-5 fw-bold" id="register-title">Crear una Compta</h1>
-    <form action="https://cendrassos.net" method="POST">
+    <form action="index.php" method="POST">
         <div class="row gx-6 gy-4 text-center justify-content-center">
             <div class="col-md-4 shadow-lg">
                 <input type="text" class="form-control-plaintext" id="user-name" placeholder="Nom">

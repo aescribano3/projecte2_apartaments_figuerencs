@@ -1,22 +1,7 @@
 <?php
 
-/**
- * Exemple per a M07.
- *
- * @author: Dani Prados dprados@cendrassos.net
- *
- * Objecte que encapsula la resposta.
- **/
-
 namespace Emeset;
 
-/**
- * Response: Objecte que encapsula la resposta.
- *
- * @author: Dani Prados dprados@cendrassos.net
- *
- * Per guarda tota la informació de la resposta.
- **/
 class Response
 {
 

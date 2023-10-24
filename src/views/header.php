@@ -29,10 +29,7 @@
       </li>
     </ul>
     <span class="navbar-text">
-      <a class="navbar-brand" href="/public/index.php?r=">
-        <img src="/public/img/default_logo_user.png" width="30" height="30" alt="user_logo" class="d-inline-block align-top ms-3">
-      </a>
-        <a class="nav-link" href="/public/index.php?r=user">Usuari</a>
+        <a class="nav-link me-4" href="/public/index.php?r=">Tencar Sesió (<?=$user["user"];?>)</a>
     </span>
   </div>
 </nav>

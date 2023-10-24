@@ -1,5 +1,8 @@
 <?php
 
-function ctrlPujar(){
-    include "../src/views/pujarapartament.php";
+function ctrlPujar($request, $response, $container){
+    
+    $response->setTemplate("pujarapartament.php");
+
+    return $response;
 }

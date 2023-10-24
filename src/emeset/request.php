@@ -1,22 +1,7 @@
 <?php
 
-/**
- * Exemple per a M07.
- *
- * @author: Dani Prados dprados@cendrassos.net
- *
- * Classe gestiona la petició HTTP.
- **/
-
 namespace Emeset;
 
-/**
- * Request: Classe gestiona la petició HTTP.
- *
- * @author: Dani Prados dprados@cendrassos.net
- *
- * Encapsula la petició HTTP per permetre llegir-la com una entrada.
- **/
 class Request
 {
 
@@ -40,7 +25,9 @@ class Request
     {
         $result = false;
         if ($input === 'SESSION') {
-            $result = $_SESSION[$id];
+            if (isset($_SESSION[$id])) {
+                $result = $_SESSION[$id];
+            }
         } elseif ($input === 'FILES') {
             $result = $_FILES[$id];
         } elseif ($input === "INPUT_REQUEST") {
