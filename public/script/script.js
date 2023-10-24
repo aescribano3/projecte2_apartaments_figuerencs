@@ -96,3 +96,37 @@ $( function() {
         return date;
       }
     } );
+
+    //View User//
+    
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtén una referencia a los enlaces
+    var enlaceDades = document.querySelector("#enlace-dades");
+    var enlaceHistorial = document.querySelector("#enlace-historial");
+    var enlaceReserves = document.querySelector("#enlace-reserves");
+    
+    // Obtén una referencia a los elementos de contenido
+    var contenidoDades = document.querySelector("#contenido-dades");
+    var contenidoHistorial = document.querySelector("#contenido-historial");
+    var contenidoReserves = document.querySelector("#contenido-reserves");
+    
+    // Agrega controladores de eventos a los enlaces
+    enlaceDades.addEventListener("click", function() {
+        contenidoDades.style.display = "block";
+        contenidoHistorial.style.display = "none";
+        contenidoReserves.style.display = "none";
+    });
+    
+    enlaceHistorial.addEventListener("click", function() {
+        contenidoDades.style.display = "none";
+        contenidoHistorial.style.display = "block";
+        contenidoReserves.style.display = "none";
+    });
+    
+    enlaceReserves.addEventListener("click", function() {
+        contenidoDades.style.display = "none";
+        contenidoHistorial.style.display = "none";
+        contenidoReserves.style.display = "block";
+    });
+});
+
