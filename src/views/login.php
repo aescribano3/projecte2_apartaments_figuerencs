@@ -16,7 +16,7 @@
 <body>
 <div class="container-md shadow-lg px-5 py-5" id="login">
     <h1 class="text-center mb-5 fw-bold" id="login-title">Iniciar Sessió</h1>
-    <form action="index.php?r=dologin needs-validation" method="POST" novalidate>
+    <form action="index.php?r=dologin" method="POST" novalidate>
         <div class="row gx-5 gy-4 text-center justify-content-center">
             <div class="col-md-8 shadow-lg">
                 <label for="user-mail">Correu Electronic</label>
