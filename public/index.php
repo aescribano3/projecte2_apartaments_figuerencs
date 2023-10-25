@@ -38,7 +38,7 @@ if ($r == "login") {
 } elseif ($r == "user") {
     $response = isLogged($request, $response, $container,"ctrlUser");
 } elseif ($r == "pujar") {
-    $response = isLogged($request, $response, $container,"ctrlPujarApartament");
+    $response = isLogged($request, $response, $container,"ctrlPujar");
 } elseif ($r == "") {
     $response = isLogged($request, $response, $container, "ctrlIndex");
 } elseif ($r == "dologin") {
@@ -46,7 +46,7 @@ if ($r == "login") {
 } elseif ($r == "dologout") {
     ctrlDoLogout($request, $response, $container);
 } else {
-    $response = isLogged($request, $response, $container,"ctrlContent");
+    $response = isLogged($request, $response, $container,"ctrlError");
 }
 
 $response->response();

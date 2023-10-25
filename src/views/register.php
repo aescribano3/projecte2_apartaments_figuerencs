@@ -19,27 +19,34 @@
     <form action="index.php" method="POST">
         <div class="row gx-6 gy-4 text-center justify-content-center">
             <div class="col-md-4 shadow-lg">
-                <input type="text" class="form-control-plaintext" id="user-name" placeholder="Nom">
+                <label for="user-name">Nom</label>
+                <input type="text" class="form-control-plaintext" id="user-name" name="user-name" placeholder="Nom">
             </div>
             <div class="col-md-2"> </div>
             <div class="col-md-4 shadow-lg">
-                <input type="text" class="form-control-plaintext" id="user-lastname" placeholder="Cognoms">
+                <label for="user-lastname">Cognoms</label>
+                <input type="text" class="form-control-plaintext" id="user-lastname" name="user-lastname" placeholder="Cognoms">
             </div>
             <div class="col-md-4 shadow-lg">
-                <input type="text" class="form-control-plaintext" id="user-number" placeholder="Numero de telefon">
+                <label for="user-number">Numero de telefon</label>
+                <input type="text" class="form-control-plaintext" id="user-number" name="user-number" placeholder="Numero de telefon">
             </div>
             <div class="col-md-2"> </div>
             <div class="col-md-4 shadow-lg">
-                <input type="text" class="form-control-plaintext" id="user-email" placeholder="Correu electrònic">
+                <label for="user-email">Correu electrònic</label>
+                <input type="text" class="form-control-plaintext" id="user-email" name="user-email" placeholder="Correu electrònic">
             </div>
             <div class="col-md-10 shadow-lg">
-                <input type="password" class="form-control-plaintext" id="user-passw" placeholder="Contrasenya">
+                <label for="user-passw">Contrasenya</label>
+                <input type="password" class="form-control-plaintext" id="user-passw" name="user-passw" placeholder="Contrasenya">
             </div>
             <div class="col-md-10 shadow-lg">
-                <input type="password" class="form-control-plaintext" id="user-confpassw" placeholder="Confirmar contrasenya">
+                <label for="user-confpassw">Confirmar contrasenya</label>
+                <input type="password" class="form-control-plaintext" id="user-confpassw" name="user-confpassw" placeholder="Confirmar contrasenya">
             </div>
             <div class="col-md-10 shadow-lg">
-                <input type="text" class="form-control-plaintext" id="user-cv" placeholder="Targeta de crèdit">
+                <label for="user-cv">Targeta de crèdit</label>
+                <input type="text" class="form-control-plaintext" id="user-cv" name="user-cv" placeholder="Targeta de crèdit">
             </div>
             <button type="button" class="btn btn-dark btn-lg btn-block shadow-lg col-md-10" onclick="window.location.href='/index.php?r='">Cancelar</button>
             <button type="submit" class="btn btn-success btn-lg btn-block shadow-lg col-md-10">Crear compte</button>

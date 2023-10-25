@@ -16,12 +16,14 @@
 <body>
 <div class="container-md shadow-lg px-5 py-5" id="login">
     <h1 class="text-center mb-5 fw-bold" id="login-title">Iniciar Sessió</h1>
-    <form action="index.php?r=dologin" method="POST">
+    <form action="index.php?r=dologin needs-validation" method="POST" novalidate>
         <div class="row gx-5 gy-4 text-center justify-content-center">
             <div class="col-md-8 shadow-lg">
+                <label for="user-mail">Correu Electronic</label>
                 <input type="text" name="user-mail" class="form-control-plaintext" id="user-mail" placeholder="Correu Electronic">
             </div>
             <div class="col-md-8 shadow-lg">
+                <label for="user-pass">Contraseña</label>
                 <input type="password" name="user-pass" class="form-control-plaintext" id="user-pass" placeholder="Contraseña"> 
             </div>
             <button type="button" class="btn btn-dark btn-lg btn-block shadow-lg col-md-8" onclick="window.location.href='/index.php?r='">Cancelar</button>

@@ -24,12 +24,11 @@
           <ul class="dropdown-menu">
             <a class="dropdown-item" href="/index.php?r=login">Login</a>
             <a class="dropdown-item" href="/index.php?r=register">Register</a>
+            <a class="dropdown-item" href="/index.php?r=user">Compta</a>
+            <a class="dropdown-item" href="/index.php?r=dologout">Tencar Sesió</a>
           </ul>
         </div>
       </li>
     </ul>
-    <span class="navbar-text">
-        <a class="nav-link me-4" href="/index.php?r=dologout">Tencar Sesió</a>
-    </span>
   </div>
 </nav>

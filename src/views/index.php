@@ -44,7 +44,7 @@
     <div class="container-md">
         <div class="row">
 
-            <a href="/index.php?r=" class="text-decoration-none">
+            <a href="/index.php?r=content" class="text-decoration-none">
                 <div class="col-8">
                     <div class="card mb-3 mt-5" style="max-width: 800px;">
                         <div class="row g-0">

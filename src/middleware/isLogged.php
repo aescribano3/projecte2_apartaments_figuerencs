@@ -21,6 +21,8 @@ function isLogged($request, $response, $container, $next){
 
     $response->set("email", $request->get("SESSION", "email"));
 
+    $_SESSION["user-email"] = $request->get("SESSION", "email");
+
     $response = $next($request, $response, $container);
 
 

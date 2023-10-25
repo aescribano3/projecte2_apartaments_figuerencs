@@ -41,7 +41,7 @@
 <!--Slider -->
 <div class="row me-0 ms-3">
   <!-- start col-8 -->
-    <div class="col-8"> 
+    <div class="col-8 mt-3"> 
         <div class="col-12">
             <p class="text-white display-5 ">345000€</p>
         </div>
@@ -80,23 +80,32 @@
 
 <!-- Formul -->
     <div class="col-3 mt-2">
-    <form action="https://www.fotocasa.es/es/" method="POST">
-        <div class="row gx-5 gy-4 text-center justify-content-center">
-            <div class="col-md-8 shadow-lg">
-                <input type="text" class="form-control-plaintext" id="user-name" placeholder="Mail">
-            </div>
-            <div class="col-md-8 shadow-lg">
-                <input type="text" class="form-control-plaintext" id="user-name" placeholder="Telefon"> 
-            </div>
-            <div class="col-md-8">
-                  <label for="from">Data Inici</label>
-                  <input type="text" id="from" name="from" class="form-control mb-3">
-                  <label for="to">Data Final</label>
-                  <input type="text" id="to" name="to" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
+        <div class="sticky-top" style="z-index: 1;">
+            <form action="https://www.fotocasa.es/es/" method="POST">
+                <div class="row gx-5 gy-4 text-center justify-content-center mt-3">
+                    <h4 class="text-light">Reservar Apartament</h4>
+                    <div class="col-md-8 shadow-lg">
+                        <label for="rsv-email">Correu Electronic</label>
+                        <input type="text" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email">
+                    </div>
+                    <div class="col-md-8 shadow-lg">
+                        <label for="rsv-telef">Telefon</label>
+                        <input type="text" class="form-control-plaintext" name="rsv-telef" id="rsv-telef" placeholder="Telefon"> 
+                    </div>
+                    <div class="col-md-8 shadow-lg">
+                        <label for="rsv-pers">Persones</label>
+                        <input type="text" class="form-control-plaintext" name="rsv-pers" id="rsv-pers" placeholder="Persones"> 
+                    </div>
+                    <div class="col-md-8">
+                            <label for="from">Data Inici</label>
+                            <input type="text" id="from" name="from" class="form-control mb-3">
+                            <label for="to">Data Final</label>
+                            <input type="text" id="to" name="to" class="form-control mb-3">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
+                </div>
+            </form>   
         </div>
-    </form>   
     </div>
 </div>
         
