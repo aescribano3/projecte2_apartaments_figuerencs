@@ -13,6 +13,7 @@ include "../src/controllers/user.php";
 include "../src/controllers/pujarapartament.php";
 include "../src/controllers/ctrlDoLogin.php";
 include "../src/controllers/ctrlDoLogout.php";
+include "../src/controllers/ctrlDoRegister.php";
 
 include "../src/middleware/isLogged.php";
 
