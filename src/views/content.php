@@ -98,9 +98,9 @@
                     </div>
                     <div class="col-md-8">
                             <label for="from">Data Inici</label>
-                            <input type="text" id="from" name="from" class="form-control mb-3">
+                            <input type="text" id="from" name="from" class="form-control mb-3 from">
                             <label for="to">Data Final</label>
-                            <input type="text" id="to" name="to" class="form-control mb-3">
+                            <input type="text" id="to" name="to" class="form-control mb-3 to">
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
                 </div>

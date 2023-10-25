@@ -90,9 +90,9 @@
                             <div class="col-12">
                                 <div class="mb-3">
                                     <label for="from">Data Inici</label>
-                                    <input type="text" id="from" name="from" class="form-control mb-3">
+                                    <input type="text" id="from" name="from" class="form-control mb-3 from">
                                     <label for="to">Data Final</label>
-                                    <input type="text" id="to" name="to" class="form-control">
+                                    <input type="text" id="to" name="to" class="form-control to">
                                 </div>
                             </div>
                         </div>
