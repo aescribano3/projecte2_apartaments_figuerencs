@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="icon" type="image/png" href="/public/img/logo_renting.png">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="icon" type="image/png" href="/img/logo_renting.png">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Content</title>
 </head>
 <body>
@@ -19,13 +19,13 @@
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/public/img/casa1.jpg" class="d-block w-100" alt="hola">
+      <img src="/img/casa1.jpg" class="d-block w-100" alt="hola">
     </div>
     <div class="carousel-item">
-      <img src="/public/img/casa2.jpg" class="d-block w-100" alt="pi">
+      <img src="/img/casa2.jpg" class="d-block w-100" alt="pi">
     </div>
     <div class="carousel-item">
-      <img src="/public/img/casa3.jpg" class="d-block w-100" alt="pe">
+      <img src="/img/casa3.jpg" class="d-block w-100" alt="pe">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -41,7 +41,7 @@
 <!--Slider -->
 <div class="row me-0 ms-3">
   <!-- start col-8 -->
-    <div class="col-8"> 
+    <div class="col-8 mt-3"> 
         <div class="col-12">
         <h1 class="text-white ">450.000€</h1>
         </div>
@@ -80,24 +80,32 @@
 
 <!-- Formul -->
     <div class="col-3 mt-2">
-    <form action="https://www.fotocasa.es/es/" method="POST">
-        <div class="row gx-5 gy-4 text-center justify-content-center">
-        <h2 class="text-white text-center">Reserva</h2>
-            <div class="col-md-8 shadow-lg">
-                <input type="text" class="form-control-plaintext" id="user-name" placeholder="Mail">
-            </div>
-            <div class="col-md-8 shadow-lg">
-                <input type="text" class="form-control-plaintext" id="user-name" placeholder="Telefon"> 
-            </div>
-            <div class="col-md-8">
-                  <label for="from">Data Inici</label>
-                  <input type="text" id="from" name="from" class="form-control mb-3">
-                  <label for="to">Data Final</label>
-                  <input type="text" id="to" name="to" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
+        <div class="sticky-top" style="z-index: 1;">
+            <form action="https://www.fotocasa.es/es/" method="POST">
+                <div class="row gx-5 gy-4 text-center justify-content-center mt-3">
+                    <h4 class="text-light">Reservar Apartament</h4>
+                    <div class="col-md-8 shadow-lg">
+                        <label for="rsv-email">Correu Electronic</label>
+                        <input type="text" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email">
+                    </div>
+                    <div class="col-md-8 shadow-lg">
+                        <label for="rsv-telef">Telefon</label>
+                        <input type="text" class="form-control-plaintext" name="rsv-telef" id="rsv-telef" placeholder="Telefon"> 
+                    </div>
+                    <div class="col-md-8 shadow-lg">
+                        <label for="rsv-pers">Persones</label>
+                        <input type="text" class="form-control-plaintext" name="rsv-pers" id="rsv-pers" placeholder="Persones"> 
+                    </div>
+                    <div class="col-md-8">
+                            <label for="from">Data Inici</label>
+                            <input type="text" id="from" name="from" class="form-control mb-3">
+                            <label for="to">Data Final</label>
+                            <input type="text" id="to" name="to" class="form-control mb-3">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
+                </div>
+            </form>   
         </div>
-    </form>   
     </div>
 </div>
         
@@ -111,7 +119,7 @@
 
     <?php include("footer.php"); ?>
    
-    <script src="/public/script/script.js"></script>
+    <script src="/script/script.js"></script>
     
 </body>
 </html>

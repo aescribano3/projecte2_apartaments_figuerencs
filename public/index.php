@@ -1,6 +1,7 @@
 <?php
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
 include "../src/config.php";
 
 include "../src/controllers/content.php";
@@ -10,24 +11,42 @@ include "../src/controllers/error.php";
 include "../src/controllers/register.php";
 include "../src/controllers/user.php";
 include "../src/controllers/pujarapartament.php";
+include "../src/controllers/ctrlDoLogin.php";
+include "../src/controllers/ctrlDoLogout.php";
+
+include "../src/middleware/isLogged.php";
+
+include "../src/Emeset/Container.php";
+include "../src/Emeset/Request.php";
+include "../src/Emeset/Response.php";
+
+$request = new \Emeset\Request();
+$response = new \Emeset\Response();
+$container = new \Emeset\Container($config);
 
 $r = '';
 if(isset($_REQUEST["r"])){
    $r = $_REQUEST["r"];
 }
 
-if ($r === "login") {
-    ctrlLogin();
+if ($r == "login") {
+    ctrlLogin($request, $response, $container);
 } elseif ($r === "content") {
-    ctrlContent();
+    $response = isLogged($request, $response, $container,"ctrlContent");
 } elseif ($r == "register") {
-    ctrlRegister();
+    $response = isLogged($request, $response, $container,"ctrlRegister");
 } elseif ($r == "user") {
-    ctrlUser();
+    $response = isLogged($request, $response, $container,"ctrlUser");
 } elseif ($r == "pujar") {
-    ctrlPujar();
+    $response = isLogged($request, $response, $container,"ctrlPujar");
 } elseif ($r == "") {
-    ctrlIndex();
+    $response = isLogged($request, $response, $container, "ctrlIndex");
+} elseif ($r == "dologin") {
+    ctrlDoLogin($request, $response, $container);
+} elseif ($r == "dologout") {
+    ctrlDoLogout($request, $response, $container);
 } else {
-    ctrlError();
+    $response = isLogged($request, $response, $container,"ctrlError");
 }
+
+$response->response();

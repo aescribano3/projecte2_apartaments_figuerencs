@@ -1,5 +1,8 @@
 <?php
 
-function ctrlError(){
-    include "../src/views/error.php";
+function ctrlError($request, $response, $container){
+    
+    $response->setTemplate("error.php");
+
+    return $response;
 }
