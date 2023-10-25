@@ -31,6 +31,17 @@ class Users {
         }
     }
 
+    public function register($email, $pass){
+        $stm = $this->sql->prepare('select id, email, pass from usuari where email=:email;');
+        $stm->execute([':email' => $email]);
+        $result = $stm->fetch(\PDO::FETCH_ASSOC);
+        if(is_array($result) && $result["pass"] == $pass){
+            return $result;
+        } else {
+            return false;
+        }
+    }
+
 
 
 }

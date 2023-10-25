@@ -45,6 +45,8 @@ if ($r == "login") {
     ctrlDoLogin($request, $response, $container);
 } elseif ($r == "dologout") {
     ctrlDoLogout($request, $response, $container);
+} elseif ($r == "doregister") {
+    ctrlDoRegister($request, $response, $container);
 } else {
     $response = isLogged($request, $response, $container,"ctrlError");
 }
