@@ -84,15 +84,15 @@
             <form action="https://www.fotocasa.es/es/" method="POST">
                 <div class="row gx-5 gy-4 text-center justify-content-center mt-3">
                     <h4 class="text-light">Reservar Apartament</h4>
-                    <div class="col-md-8 shadow-lg">
+                    <div class="col-md-8 shadow-lg input-col">
                         <label for="rsv-email">Correu Electronic</label>
-                        <input type="text" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email">
+                        <input type="email" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email">
                     </div>
-                    <div class="col-md-8 shadow-lg">
+                    <div class="col-md-8 shadow-lg input-col">
                         <label for="rsv-telef">Telefon</label>
                         <input type="text" class="form-control-plaintext" name="rsv-telef" id="rsv-telef" placeholder="Telefon"> 
                     </div>
-                    <div class="col-md-8 shadow-lg">
+                    <div class="col-md-8 shadow-lg input-col">
                         <label for="rsv-pers">Persones</label>
                         <input type="text" class="form-control-plaintext" name="rsv-pers" id="rsv-pers" placeholder="Persones"> 
                     </div>

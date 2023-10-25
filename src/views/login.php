@@ -18,11 +18,11 @@
     <h1 class="text-center mb-5 fw-bold" id="login-title">Iniciar Sessió</h1>
     <form action="index.php?r=dologin" method="POST" novalidate>
         <div class="row gx-5 gy-4 text-center justify-content-center">
-            <div class="col-md-8 shadow-lg">
+            <div class="col-md-8 shadow-lg input-col">
                 <label for="user-mail">Correu Electronic</label>
-                <input type="text" name="user-mail" class="form-control-plaintext" id="user-mail" placeholder="Correu Electronic">
+                <input type="email" name="user-mail" class="form-control-plaintext" id="user-mail" placeholder="Correu Electronic">
             </div>
-            <div class="col-md-8 shadow-lg">
+            <div class="col-md-8 shadow-lg input-col">
                 <label for="user-pass">Contraseña</label>
                 <input type="password" name="user-pass" class="form-control-plaintext" id="user-pass" placeholder="Contraseña"> 
             </div>

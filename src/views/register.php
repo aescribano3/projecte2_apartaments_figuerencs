@@ -18,35 +18,44 @@
     <h1 class="text-center mb-5 fw-bold" id="register-title">Crear una Compta</h1>
     <form action="index.php?r=doregister" method="POST">
         <div class="row gx-6 gy-4 text-center justify-content-center">
-            <div class="col-md-4 shadow-lg">
+            <div class="col-md-4 shadow-lg input-col">
                 <label for="user-name">Nom</label>
-                <input type="text" class="form-control-plaintext" id="user-name" name="user-name" placeholder="Nom">
+                <input type="text" class="form-control-plaintext" id="user-name" name="user-name" placeholder="Nom" required>
             </div>
             <div class="col-md-2"> </div>
-            <div class="col-md-4 shadow-lg">
+            <div class="col-md-4 shadow-lg input-col">
                 <label for="user-lastname">Cognoms</label>
-                <input type="text" class="form-control-plaintext" id="user-lastname" name="user-lastname" placeholder="Cognoms">
+                <input type="text" class="form-control-plaintext" id="user-lastname" name="user-lastname" placeholder="Cognoms" required>
             </div>
-            <div class="col-md-4 shadow-lg">
+            <div class="col-md-4 shadow-lg input-col">
                 <label for="user-number">Numero de telefon</label>
-                <input type="text" class="form-control-plaintext" id="user-number" name="user-number" placeholder="Numero de telefon">
+                <input type="text" class="form-control-plaintext" id="user-number" name="user-number" placeholder="Numero de telefon" required>
             </div>
             <div class="col-md-2"> </div>
-            <div class="col-md-4 shadow-lg">
+            <div class="col-md-4 shadow-lg input-col">
                 <label for="user-email">Correu electrònic</label>
-                <input type="text" class="form-control-plaintext" id="user-email" name="user-email" placeholder="Correu electrònic">
+                <input type="email" class="form-control-plaintext" id="user-email" name="user-email" placeholder="Correu electrònic" required>
             </div>
-            <div class="col-md-10 shadow-lg">
-                <label for="user-passw">Contrasenya</label>
-                <input type="password" class="form-control-plaintext" id="user-passw" name="user-passw" placeholder="Contrasenya">
+            <div class="col-md-10 shadow-lg input-col">
+                <label for="user-pass">Contrasenya</label>
+                <input type="password" class="form-control-plaintext" id="user-pass" name="user-pass" placeholder="Contrasenya" required>
             </div>
-            <div class="col-md-10 shadow-lg">
-                <label for="user-confpassw">Confirmar contrasenya</label>
-                <input type="password" class="form-control-plaintext" id="user-confpassw" name="user-confpassw" placeholder="Confirmar contrasenya">
+            <div class="col-md-10 shadow-lg input-col">
+                <label for="user-confpass">Confirmar contrasenya</label>
+                <input type="password" class="form-control-plaintext" id="user-confpass" name="user-confpass" placeholder="Confirmar contrasenya" required>
             </div>
-            <div class="col-md-10 shadow-lg">
+            <div class="col-md-6 shadow-lg input-col">
                 <label for="user-cv">Targeta de crèdit</label>
-                <input type="text" class="form-control-plaintext" id="user-cv" name="user-cv" placeholder="Targeta de crèdit">
+                <input type="text" class="form-control-plaintext" id="user-cv" name="user-cv" placeholder="Targeta de crèdit" required>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2 shadow-lg input-col">
+                <label for="user-rol">Rol s'usuari</label>
+                <select class="form-select" aria-label="Default select example" id="user-rol" name="user-rol">
+                    <option value="Usuari" selected>Usuari Client</option>
+                    <option value="Gestor">Usuari Gestor</option>
+                    <option value="Administrador">Usuari Administrador</option>
+                </select>
             </div>
             <button type="button" class="btn btn-dark btn-lg btn-block shadow-lg col-md-10" onclick="window.location.href='/index.php?r='">Cancelar</button>
             <button type="submit" class="btn btn-success btn-lg btn-block shadow-lg col-md-10">Crear compte</button>
