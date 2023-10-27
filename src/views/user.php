@@ -16,93 +16,143 @@
 <body>
     <?php include("header.php"); ?>
 
-<div id="userx" class="row me-0">
-    <div class="col-md-2 ">
-        <div>
-            <p class="text-white text-center mt-5  fs-2" id="enlace-dades">Dades</p>
-            <p class="text-white text-center  fs-2" id="enlace-historial">Historial</p>
-            <p class="text-white text-center mb-5 fs-2" id="enlace-reserves">Reserves</p>
-
-        </div>
+<div id="userx" class="row me-0 bg-info">
+  <div class="col-md-2 text-white text-center">
+      <p class="mt-3 fs-2" id="enlace-dades">Dades</p>
+      <p class="mt-3 fs-2" id="enlace-historial">Historial</p>
+      <p class="mt-3 fs-2" id="enlace-reserves">Reserves</p>
+  </div>
+  
+  <!-- Col de dades-->
+  <div class="col-md-10 bg-dark d-flex">
+    <div id="contenido-dades">
+      <h1 class="text-white mb-3 mt-5 text-center">Dades Personals</h1>
+      <form action="index.php?r=doupdate" method="POST">
+      <div class="row gx-6 gy-4 text-center justify-content-center">
+            <div class="col-md-4 shadow-lg input-col">
+                <label for="user-name">Nom</label>
+                <input type="text" class="form-control-plaintext" id="user-name" name="user-name-update" placeholder="Nom">
+            </div>
+            <div class="col-md-2"> </div>
+            <div class="col-md-4 shadow-lg input-col">
+                <label for="user-lastname">Cognoms</label>
+                <input type="text" class="form-control-plaintext" id="user-lastname" name="user-lastname-update" placeholder="Cognoms">
+            </div>
+            <div class="col-md-4 shadow-lg input-col">
+                <label for="user-number">Numero de telefon</label>
+                <input type="text" class="form-control-plaintext" id="user-number" name="user-number-update" placeholder="Numero de telefon">
+            </div>
+            <div class="col-md-2"> </div>
+            <div class="col-md-4 shadow-lg input-col">
+                <label for="user-email">Correu electrònic</label>
+                <input type="email" class="form-control-plaintext" id="user-email" name="user-email-update" placeholder="Correu electrònic">
+            </div>
+            <div class="col-md-4 shadow-lg input-col">
+                <label for="user-pass">Contrasenya</label>
+                <input type="password" class="form-control-plaintext" id="user-pass" name="user-pass-update" placeholder="Contrasenya">
+            </div>
+            <div class="col-md-2"> </div>
+            <div class="col-md-4 shadow-lg input-col">
+                <label for="user-confpass">Targeta de crèdit</label>
+                <input type="text" class="form-control-plaintext" id="user-confpass" name="user-cv-update" placeholder="Targeta de crèdit">
+            </div>
+            <div class="col-md-6"></div>
+            <button type="submit" class="btn btn-info btn-lg btn-block shadow-lg col-md-10 mt-5">Guardar canvis</button>
+        </form>
     </div>
+  </div>
 
-    <!-- Col de dades-->
- <div class=" col-md-10 bg-dark d-flex align-items-center justify-content-center">
-    <div id="contenido-dades" class="">
-                <h1 class="text-white mb-5 ">Dades Personals</h1>
-                <div class="col-md-12 shadow-lg border border-dark bg-light border-2 rounded-3 mb-5">
-                    <input type="text" class="form-control-plaintext text-center" id="apt-lat" placeholder="User">
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-12 shadow-lg border border-dark bg-light border-2 rounded-3 mb-5">
-                    <input type="text" class="form-control-plaintext text-center" id="apt-lat" placeholder="Contraseña">
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-12 shadow-lg border border-dark bg-light border-2 rounded-3 mb-5">
-                    <input type="text" class="form-control-plaintext text-center" id="apt-lat" placeholder="Mail">
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-12 shadow-lg border border-dark bg-light border-2 rounded-3 mb-5">
-                    <input type="text" class="form-control-plaintext text-center" id="apt-lat" placeholder="Telefon">
-                </div>
-<!-- Col de historials-->
-    </div>
-    
-    <div id="contenido-historial" class="col-12 ">
-    <h1 id="historial"class="text-white d-flex align-items-center justify-content-center ">Historial Reserves</h1>
+  <!-- Col de historials-->
+  <div id="contenido-historial" class="col-12">
+    <h1 class="text-white d-flex align-items-center justify-content-center mt-4 mb-4">Historial Reserves</h1>
     <table class="table table-striped table-hover">
-  <thead>
-    <tr class="table-warning">
-      <th scope="col">#</th>
-      <th scope="col">Dia entrada</th>
-      <th scope="col">Dia Sortida</th>
-      <th scope="col">Preu</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="table-warning">
-      <th scope="row">1</th>
-      <td>10/05/2023</td>
-      <td>15/05/2023</td>
-      <td>100€</td>
-    </tr>
-    <tr class="table-warning">
-      <th scope="row">2</th>
-      <td>10/05/2023</td>
-      <td>15/05/2023</td>
-      <td>100€</td>
-    </tr>
-    <tr class="table-warning">
-      <th scope="row">3</th>
-      <td>15/05/2023</td>
-      <td>15/05/2023</td>
-      <td>100€</td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-    
-    <!--Col de reserves-->
-    <div id="contenido-reserves">
-                <h1 class="text-white mb-5 ">Reserves Obertes</h1>
-                <div class="col-md-12 shadow-lg border border-dark bg-light border-2 rounded-3 mb-5 ">
-                <input type="text" class="form-control-plaintext text-center" id="apt-lat" placeholder="Dia Entrada">
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-12 shadow-lg border border-dark bg-light border-2 rounded-3 mb-5">
-                    <input type="text" class="form-control-plaintext text-center" id="apt-lat" placeholder="Dia Sortida">
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-12 shadow-lg border border-dark bg-light border-2 rounded-3 mb-5">
-                    <input type="text" class="form-control-plaintext text-center" id="apt-lat" placeholder="Telefon">
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-12 shadow-lg border border-dark bg-light border-2 rounded-3 mb-5">
-                    <input type="text" class="form-control-plaintext text-center" id="apt-lat" placeholder="Cancelar reserva">
-                </div>
-    </div>
+      <thead>
+        <tr class="table-warning">
+          <th scope="col">#</th>
+          <th scope="col">Dia entrada</th>
+          <th scope="col">Dia Sortida</th>
+          <th scope="col">Preu</th>
+          <th scope="col">Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-warning">
+          <th scope="row">1</th>
+          <td>10/05/2023</td>
+          <td>15/05/2023</td>
+          <td>100€</td>
+          <td>Cancelado</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">2</th>
+          <td>10/05/2023</td>
+          <td>15/05/2023</td>
+          <td>100€</td>
+          <td>Terminado</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">3</th>
+          <td>15/05/2023</td>
+          <td>15/05/2023</td>
+          <td>100€</td>
+          <td>En Reserva</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">4</th>
+          <td>15/05/2023</td>
+          <td>15/05/2023</td>
+          <td>100€</td>
+          <td>En Reserva</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">5</th>
+          <td>15/05/2023</td>
+          <td>15/05/2023</td>
+          <td>100€</td>
+          <td>En Reserva</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    
+  <!--Col de reserves-->
+  <div id="contenido-reserves" class="col-12">
+    <h1 class="text-white mt-4 mb-4 text-center">Reserves Obertes</h1>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr class="table-warning">
+          <th scope="col">#</th>
+          <th scope="col">Dia entrada</th>
+          <th scope="col">Dia Sortida</th>
+          <th scope="col">Preu</th>
+          <th scope="col">Cancelar Reserva</th> <!-- Agregamos una nueva columna para el botón Eliminar -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-warning">
+          <th scope="row">3</th>
+          <td>10/05/2023</td>
+          <td>15/05/2023</td>
+          <td>100€</td>
+          <td><button class="btn btn-danger">Cancelar</button></td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">4</th>
+          <td>10/05/2023</td>
+          <td>15/05/2023</td>
+          <td>100€</td>
+          <td><button class="btn btn-danger">Cancelar</button></td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">5</th>
+          <td>15/05/2023</td>
+          <td>15/05/2023</td>
+          <td>100€</td>
+          <td><button class="btn btn-danger">Cancelar</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
 </div>
     <?php include("footer.php"); ?>
     <script src="/script/script.js"></script>

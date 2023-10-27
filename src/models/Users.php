@@ -12,7 +12,7 @@ class Users {
 
     public function getAll(){
         $users = array();
-        $query = "select id, email, pass from usuari;";
+        $query = "select id, nom, cognom, email, telefon, pass, cv, rol from usuari;";
         foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $user) {
             $users[] = $user;
         }
@@ -51,4 +51,47 @@ class Users {
         return $this->sql->lastInsertId();
     }
 
+    public function update($id, $name, $lastname, $number, $email, $pass, $cv){
+
+        $query = "update usuari set ";
+        $params = array();
+
+        if(($name != "")){
+            $query .= "nom=:nom, ";
+            $params[':nom'] = $name;
+        }
+
+        if(($lastname != "")){
+            $query .= "cognom=:cognom, ";
+            $params[':cognom'] = $lastname;
+        }
+
+        if(($number != "")){
+            $query .= "telefon=:telefon, ";
+            $params[':telefon'] = $number;
+        }
+
+        if(($email != "")){
+            $query .= "email=:email, ";
+            $params[':email'] = $email;
+        }
+
+        if(($pass != "")){
+            $query .= "pass=:pass, ";
+            $params[':pass'] = $pass;
+        }
+
+        if(($cv != "")){
+            $query .= "cv=:cv ";
+            $params[':cv'] = $cv;
+        }
+
+        $query .= "WHERE id=:id";
+        $params[':id'] = $id;
+
+        $stm = $this->sql->prepare($query);
+        $stm->execute($params);
+
+        return $stm->rowCount();
+    }
 }

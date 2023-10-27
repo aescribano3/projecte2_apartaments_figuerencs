@@ -14,6 +14,7 @@ include "../src/controllers/pujarapartament.php";
 include "../src/controllers/ctrlDoLogin.php";
 include "../src/controllers/ctrlDoLogout.php";
 include "../src/controllers/ctrlDoRegister.php";
+include "../src/controllers/ctrlDoUpdate.php";
 
 include "../src/middleware/isLogged.php";
 
@@ -48,6 +49,8 @@ if ($r == "login") {
     ctrlDoLogout($request, $response, $container);
 } elseif ($r == "doregister") {
     ctrlDoRegister($request, $response, $container);
+} elseif ($r == "doupdate") {
+    $response = isLogged($request, $response, $container,"ctrlDoUpdate");
 } else {
     $response = isLogged($request, $response, $container,"ctrlError");
 }

@@ -16,7 +16,7 @@
         <div class="col-lg-4 mt-4">
           <h3 class="text-white">Contacto</h3>
           <p class="text-white">Correo electrónico: Apartamentsfree@gmail.com</p>
-          <p class="text-white">Teléfono: 123 456 789</p>
+          <p class="text-white">Teléfono: +34 123 456 789</p>
         </div>
         <div class="col-lg-4 mt-4">
           <h3 class="text-white">Derechos de autor</h3>
