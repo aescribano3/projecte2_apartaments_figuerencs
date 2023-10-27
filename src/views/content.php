@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="steelsheet" href="https://unkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="icon" type="image/png" href="/img/logo_renting.png">
     <link rel="stylesheet" href="/css/style.css">
     <title>Content</title>
@@ -19,13 +21,13 @@
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/img/casa1.jpg" class="d-block w-100" alt="hola">
+      <img src="/img/casa1.jpg" class="d-block w-100" alt="img1">
     </div>
     <div class="carousel-item">
-      <img src="/img/casa2.jpg" class="d-block w-100" alt="pi">
+      <img src="/img/casa2.jpg" class="d-block w-100" alt="img2">
     </div>
     <div class="carousel-item">
-      <img src="/img/casa3.jpg" class="d-block w-100" alt="pe">
+      <img src="/img/casa3.jpg" class="d-block w-100" alt="img3">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -70,9 +72,7 @@
         <!-- Google map -->
         <div class="row mt-3">
             <div class="col-12">
-                <div id="map-container-google-1 " class="z-depth-1-half map-container mb-3" style="height: 500px " >
-                    <iframe src="https://maps.google.com/maps?q=manhattan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                        style="border:0; width: 100%; height: 100%;" allowfullscreen></iframe>
+                <div id="map" class="z-depth-1-half map-container mb-3" style="height: 500px;">
                 </div>
             </div>
         </div>
@@ -108,15 +108,6 @@
         </div>
     </div>
 </div>
-        
-
-        
-        
-
-
-
-
-
     <?php include("footer.php"); ?>
    
     <script src="/script/script.js"></script>
