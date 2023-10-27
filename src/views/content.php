@@ -89,14 +89,14 @@
                         <input type="email" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email">
                     </div>
                     <div class="col-md-8 shadow-lg input-col">
-                        <label for="rsv-telef">Telefon</label>
+                        <label for="rsv-telef" class>Telefon</label>
                         <input type="text" class="form-control-plaintext" name="rsv-telef" id="rsv-telef" placeholder="Telefon"> 
                     </div>
                     <div class="col-md-8 shadow-lg input-col">
                         <label for="rsv-pers">Persones</label>
                         <input type="text" class="form-control-plaintext" name="rsv-pers" id="rsv-pers" placeholder="Persones"> 
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 text-light">
                             <label for="from">Data Inici</label>
                             <input type="text" id="from" name="from" class="form-control mb-3 from">
                             <label for="to">Data Final</label>
