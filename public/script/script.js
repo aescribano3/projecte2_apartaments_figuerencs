@@ -31,35 +31,25 @@ $( function() {
     }
   } );
 
-//View User//
-document.addEventListener("DOMContentLoaded", function() {
-    // Obtén una referencia a los enlaces
-    var enlaceDades = document.querySelector("#enlace-dades");
-    var enlaceHistorial = document.querySelector("#enlace-historial");
-    var enlaceReserves = document.querySelector("#enlace-reserves");
-    
-    // Obtén una referencia a los elementos de contenido
-    var contenidoDades = document.querySelector("#contenido-dades");
-    var contenidoHistorial = document.querySelector("#contenido-historial");
-    var contenidoReserves = document.querySelector("#contenido-reserves");
-    
-    // Agrega controladores de eventos a los enlaces
-    enlaceDades.addEventListener("click", function() {
-        contenidoDades.style.display = "block";
-        contenidoHistorial.style.display = "none";
-        contenidoReserves.style.display = "none";
-    });
-    
-    enlaceHistorial.addEventListener("click", function() {
-        contenidoDades.style.display = "none";
-        contenidoHistorial.style.display = "block";
-        contenidoReserves.style.display = "none";
-    });
-    
-    enlaceReserves.addEventListener("click", function() {
-        contenidoDades.style.display = "none";
-        contenidoHistorial.style.display = "none";
-        contenidoReserves.style.display = "block";
-    });
-});
+  $(document).ready(function () {
 
+    $('#contenido-dades').show();
+
+    $('#enlace-dades').on('click', function () {
+      $('#contenido-dades').show();
+      $('#contenido-historial').hide();
+      $('#contenido-reserves').hide();
+    });
+    $('#enlace-historial').on('click', function () {
+      $('#contenido-dades').hide();
+      $('#contenido-historial').show();
+      $('#contenido-reserves').hide();
+    });
+    $('#enlace-reserves').on('click', function () {
+      $('#contenido-dades').hide();
+      $('#contenido-historial').hide();
+      $('#contenido-reserves').show();
+    });
+
+
+  });
