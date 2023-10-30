@@ -19,7 +19,7 @@
       </li>
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Usuari<?php echo $_SESSION["user-email"]; ?>
+            <i class="fa-solid fa-user me-2"></i>Usuari
           </a>
           <ul class="dropdown-menu">
             <a class="dropdown-item" href="/index.php?r=login">Login</a>

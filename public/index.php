@@ -39,6 +39,7 @@ if ($r == "login") {
     $response = isLogged($request, $response, $container,"ctrlContent");
 } elseif ($r == "register") {
     $response = isLogged($request, $response, $container,"ctrlRegister");
+    //ctrlDoRegister($request, $response, $container);
 } elseif ($r == "user") {
     $response = isLogged($request, $response, $container,"ctrlUser");
 } elseif ($r == "pujar") {

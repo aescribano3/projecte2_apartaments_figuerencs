@@ -12,7 +12,7 @@ class Apartment {
 
     public function getAll(){
         $apartaments = array();
-        $query = "select idApartament, idUsuari, diaMaximCancel, latitud, longitud, habitacions, titol, descripcio, preuTA,	preuTB, metresCuadrats, adreca, codiPostal from apartaments;";
+        $query = "select * from apartaments;";
         foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $apt) {
             $apartaments[] = $apt;
         }

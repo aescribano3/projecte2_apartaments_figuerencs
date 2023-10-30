@@ -17,8 +17,8 @@ function ctrlDoRegister($request, $response, $container){
 
     if($userModel) {
 
-        $response->setSession("user", $userModel);
-        $response->setSession("logged", true);
+        $response->setSession("user", []);
+        $response->setSession("logged", false);
         $response->redirect("location: /index.php");
     } else {
         $response->redirect("location: /index.php?r=register");

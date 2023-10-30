@@ -34,8 +34,9 @@ function ctrlDoUpload($request, $response, $container){
     }
 
     $aptModel = $container->apartaments();
+    $aptModel = $container->apartaments();
 
-    $aptModel = $aptModel->upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_pisc, $apt_wifi, $apt_park, $apt_cale, $data_ini_alta, $data_fin_alta, $data_ini_baixa, $data_fin_baixa, $apt_diamaxcancel, $image_name, $image_tmp_name);
+    $aptModel = $aptModel->upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_diamaxcancel);
 
     return $response;
 }

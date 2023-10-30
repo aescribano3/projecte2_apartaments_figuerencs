@@ -10,14 +10,15 @@ class Users {
         $this->sql = $sql;
     }
 
-    public function getAll(){
-        $users = array();
-        $query = "select id, nom, cognom, email, telefon, pass, cv, rol from usuari;";
-        foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $user) {
-            $users[] = $user;
+    public function getUserData($id){
+        $stm = $this->sql->prepare("select * from usuari where id=:id;");
+        $stm -> execute([':id' => $id]);
+        $result = $stm->fetch(\PDO::FETCH_ASSOC);
+        if($result){
+            return $result;
+        } else {
+            return false;
         }
-
-        return $users;
     }
 
     public function login($email, $pass){
@@ -53,45 +54,18 @@ class Users {
 
     public function update($id, $name, $lastname, $number, $email, $pass, $cv){
 
-        $query = "update usuari set ";
-        $params = array();
+        $stm = $this->sql->prepare('UPDATE usuari SET nom=:nom, cognom=:cognom, telefon=:telefon, email=:email, pass=:pass, cv=:cv WHERE id=:id');
 
-        if(($name != "")){
-            $query .= "nom=:nom, ";
-            $params[':nom'] = $name;
-        }
-
-        if(($lastname != "")){
-            $query .= "cognom=:cognom, ";
-            $params[':cognom'] = $lastname;
-        }
-
-        if(($number != "")){
-            $query .= "telefon=:telefon, ";
-            $params[':telefon'] = $number;
-        }
-
-        if(($email != "")){
-            $query .= "email=:email, ";
-            $params[':email'] = $email;
-        }
-
-        if(($pass != "")){
-            $query .= "pass=:pass, ";
-            $params[':pass'] = $pass;
-        }
-
-        if(($cv != "")){
-            $query .= "cv=:cv ";
-            $params[':cv'] = $cv;
-        }
-
-        $query .= "WHERE id=:id";
-        $params[':id'] = $id;
-
-        $stm = $this->sql->prepare($query);
-        $stm->execute($params);
-
-        return $stm->rowCount();
+        $stm->execute([
+            ':id' => $id,
+            ':nom' => $name,
+            ':cognom' => $lastname,
+            ':telefon' => $number,
+            ':email' => $email,
+            ':pass' => $pass,
+            ':cv' => $cv
+        ]);
+        
+        return $this->sql->lastInsertId();
     }
 }
