@@ -42,4 +42,9 @@ class Container
         return new \Apartaments\Users($this->sql);
     }
 
+    public function apartaments()
+    {
+        return new \Apartaments\Apartment($this->sql);
+    }
+
 }
