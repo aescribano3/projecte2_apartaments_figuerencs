@@ -15,8 +15,10 @@ include "../src/controllers/ctrlDoLogin.php";
 include "../src/controllers/ctrlDoLogout.php";
 include "../src/controllers/ctrlDoRegister.php";
 include "../src/controllers/ctrlDoUpdate.php";
+include "../src/controllers/ctrlDoUpload.php";
 
 include "../src/middleware/isLogged.php";
+include "../src/middleware/isGestor.php";
 
 include "../src/Emeset/Container.php";
 include "../src/Emeset/Request.php";
@@ -51,6 +53,8 @@ if ($r == "login") {
     ctrlDoRegister($request, $response, $container);
 } elseif ($r == "doupdate") {
     $response = isLogged($request, $response, $container,"ctrlDoUpdate");
+} elseif ($r == "doupload") {
+    $response = isLogged($request, $response, $container,"ctrlDoUpload");
 } else {
     $response = isLogged($request, $response, $container,"ctrlError");
 }

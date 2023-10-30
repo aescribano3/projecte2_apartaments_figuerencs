@@ -15,3 +15,4 @@ $config = [
 
 include "../src/models/Db.php";
 include "../src/models/Users.php";
+include "../src/models/Apartment.php";
