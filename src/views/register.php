@@ -52,9 +52,14 @@
             <div class="col-md-2 shadow-lg input-col">
                 <label for="user-rol">Rol s'usuari</label>
                 <select class="form-select" aria-label="Default select example" id="user-rol" name="user-rol">
-                    <option value="Usuari" selected>Usuari Client</option>
-                    <option value="Gestor">Usuari Gestor</option>
-                    <option value="Administrador">Usuari Administrador</option>
+                        <option value="Usuari" selected>Usuari Client</option>
+                    <?php if($_SESSION["rol"] == "Gestor"){ ?>
+                        <option value="Gestor">Usuari Gestor</option>
+                    <?php } ?>
+                    <?php if($_SESSION["rol"] == "Administrador"){ ?>
+                        <option value="Gestor">Usuari Gestor</option>
+                        <option value="Administrador">Usuari Administrador</option>
+                    <?php } ?>
                 </select>
             </div>
             <button type="button" class="btn btn-dark btn-lg btn-block shadow-lg col-md-10" onclick="window.location.href='/index.php?r='">Cancelar</button>

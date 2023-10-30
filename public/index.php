@@ -18,7 +18,6 @@ include "../src/controllers/ctrlDoUpdate.php";
 include "../src/controllers/ctrlDoUpload.php";
 
 include "../src/middleware/isLogged.php";
-include "../src/middleware/isGestor.php";
 
 include "../src/Emeset/Container.php";
 include "../src/Emeset/Request.php";
@@ -38,8 +37,8 @@ if ($r == "login") {
 } elseif ($r === "content") {
     $response = isLogged($request, $response, $container,"ctrlContent");
 } elseif ($r == "register") {
-    $response = isLogged($request, $response, $container,"ctrlRegister");
-    //ctrlDoRegister($request, $response, $container);
+    //$response = isLogged($request, $response, $container,"ctrlRegister");
+    ctrlRegister($request, $response, $container);
 } elseif ($r == "user") {
     $response = isLogged($request, $response, $container,"ctrlUser");
 } elseif ($r == "pujar") {

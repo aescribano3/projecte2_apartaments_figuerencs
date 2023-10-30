@@ -27,7 +27,13 @@
                 <input type="password" name="user-pass" class="form-control-plaintext" id="user-pass" placeholder="Contraseña"> 
             </div>
             <button type="button" class="btn btn-dark btn-lg btn-block shadow-lg col-md-8" onclick="window.location.href='/index.php?r='">Cancelar</button>
+            <?php if($_SESSION["rol"] == "Gestor" || $_SESSION["rol"] == "Administrador"){ ?>
+                <button type="button" class="btn btn-warning btn-lg btn-block shadow-lg col-md-8" onclick="window.location.href='/index.php?r=register'">Crear Compta</button>
+            <?php } else if ($_SESSION["rol"] != "Usuari" ){ ?>
+                <button type="button" class="btn btn-warning btn-lg btn-block shadow-lg col-md-8" onclick="window.location.href='/index.php?r=register'">Registrar-se</button>
+            <?php } ?>
             <button type="submit" class="btn btn-success btn-lg btn-block shadow-lg col-md-8">Iniciar sesió</button>
+
         </div>
     </form>
 </div>

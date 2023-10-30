@@ -22,7 +22,7 @@ class Users {
     }
 
     public function login($email, $pass){
-        $stm = $this->sql->prepare('select id, email, pass from usuari where email=:email;');
+        $stm = $this->sql->prepare('select id, email, rol ,pass from usuari where email=:email;');
         $stm->execute([':email' => $email]);
         $result = $stm->fetch(\PDO::FETCH_ASSOC);
         if(is_array($result) && $result["pass"] == $pass){
@@ -39,6 +39,7 @@ class Users {
         }
 
         $stm = $this->sql->prepare('INSERT INTO usuari (nom, cognom, telefon, email, pass, cv, rol) VALUES (:nom, :cognom, :telefon, :email, :pass, :cv, :rol)');
+        
         $stm->execute([
             ':nom' => $name,
             ':cognom' => $lastname,
