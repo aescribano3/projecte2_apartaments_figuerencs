@@ -30,31 +30,31 @@
       <form action="index.php?r=doupdate" method="POST">
       <div class="row gx-6 gy-4 text-center justify-content-center">
             <div class="col-md-4 shadow-lg input-col">
-                <label for="user-name">Nom</label>
-                <input type="text" class="form-control-plaintext" id="user-name" name="user-name-update" placeholder="Nom">
+                <label for="user-name"><?= $name ?></label>
+                <input type="text" class="form-control-plaintext" id="user-name" name="user-name-update" placeholder="Nom" required>
             </div>
             <div class="col-md-2"> </div>
             <div class="col-md-4 shadow-lg input-col">
-                <label for="user-lastname">Cognoms</label>
-                <input type="text" class="form-control-plaintext" id="user-lastname" name="user-lastname-update" placeholder="Cognoms">
+                <label for="user-lastname"><?= $lastname; ?></label>
+                <input type="text" class="form-control-plaintext" id="user-lastname" name="user-lastname-update" placeholder="Cognoms" required>
             </div>
             <div class="col-md-4 shadow-lg input-col">
-                <label for="user-number">Numero de telefon</label>
-                <input type="text" class="form-control-plaintext" id="user-number" name="user-number-update" placeholder="Numero de telefon">
-            </div>
-            <div class="col-md-2"> </div>
-            <div class="col-md-4 shadow-lg input-col">
-                <label for="user-email">Correu electrònic</label>
-                <input type="email" class="form-control-plaintext" id="user-email" name="user-email-update" placeholder="Correu electrònic">
-            </div>
-            <div class="col-md-4 shadow-lg input-col">
-                <label for="user-pass">Contrasenya</label>
-                <input type="password" class="form-control-plaintext" id="user-pass" name="user-pass-update" placeholder="Contrasenya">
+                <label for="user-number"><?= $number; ?></label>
+                <input type="text" class="form-control-plaintext" id="user-number" name="user-number-update" placeholder="Numero de telefon" required>
             </div>
             <div class="col-md-2"> </div>
             <div class="col-md-4 shadow-lg input-col">
-                <label for="user-confpass">Targeta de crèdit</label>
-                <input type="text" class="form-control-plaintext" id="user-confpass" name="user-cv-update" placeholder="Targeta de crèdit">
+                <label for="user-email"><?= $email; ?></label>
+                <input type="email" class="form-control-plaintext" id="user-email" name="user-email-update" placeholder="Correu electrònic" required>
+            </div>
+            <div class="col-md-4 shadow-lg input-col">
+                <label for="user-pass"><?= $pass; ?></label>
+                <input type="password" class="form-control-plaintext" id="user-pass" name="user-pass-update" placeholder="Contrasenya" required>
+            </div>
+            <div class="col-md-2"> </div>
+            <div class="col-md-4 shadow-lg input-col">
+                <label for="user-confpass"><?= $cv; ?></label>
+                <input type="text" class="form-control-plaintext" id="user-confpass" name="user-cv-update" placeholder="Targeta de crèdit" required>
             </div>
             <div class="col-md-6"></div>
             <button type="submit" class="btn btn-info btn-lg btn-block shadow-lg col-md-10 mt-5">Guardar canvis</button>

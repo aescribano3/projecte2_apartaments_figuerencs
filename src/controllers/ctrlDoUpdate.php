@@ -2,7 +2,7 @@
 
 function ctrlDoUpdate($request, $response, $container){
     
-    $id = $request->get("SESSION", "user");
+    $id = $_SESSION["user"]["id"];
     $name = $request->get(INPUT_POST, "user-name-update");
     $lastname = $request->get(INPUT_POST, "user-lastname-update");
     $number = $request->get(INPUT_POST, "user-number-update");
