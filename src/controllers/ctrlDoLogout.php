@@ -3,6 +3,7 @@
 function ctrlDoLogout($request, $response, $container){
 
     $response->setSession("user", []);
+    $response->setSession("rol", []);
     $response->setSession("logged", false);
     $response->redirect("location: /index.php");
     

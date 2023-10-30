@@ -16,10 +16,14 @@ function ctrlDoRegister($request, $response, $container){
     $userModel = $userModel->register($name, $lastname, $number, $email, $pass, $confpass, $cv, $rol);
 
     if($userModel) {
-
-        $response->setSession("user", []);
-        $response->setSession("logged", false);
-        $response->redirect("location: /index.php");
+        if($_SESSION["rol"] == "Gestor" || $_SESSION["rol"] == "Administrador"){
+            $response->redirect("location: /index.php");
+        }else{
+            $response->setSession("user", $userModel);
+            $response->setSession("logged", true);
+            $response->setSession("rol", $rol);
+            $response->redirect("location: /index.php");
+        }
     } else {
         $response->redirect("location: /index.php?r=register");
     }

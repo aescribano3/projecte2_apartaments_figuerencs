@@ -12,6 +12,7 @@ function ctrlDoLogin($request, $response, $container){
 
         $response->setSession("user", $userModel);
         $response->setSession("logged", true);
+        $response->setSession("rol", $userModel["rol"]);
         $response->redirect("location: /index.php");
 
     } else {

@@ -8,23 +8,21 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-      <li class="nav-item active">
-        <a class="nav-link" href="/index.php?r=content">Contingut <span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/index.php?r=pujar">Pujar Apartament</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/index.php?r=error">Error</a>
-      </li>
+      <?php if($_SESSION["rol"] != "Usuari"){ ?>
+        <li class="nav-item">
+          <a class="nav-link" href="/index.php?r=pujar">Pujar Apartament</a>
+        </li>
+      <?php } ?>
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa-solid fa-user me-2"></i>Usuari
           </a>
           <ul class="dropdown-menu">
             <a class="dropdown-item" href="/index.php?r=login">Login</a>
-            <a class="dropdown-item" href="/index.php?r=register">Register</a>
-            <a class="dropdown-item" href="/index.php?r=user">Compta</a>
+            <?php if($_SESSION["rol"] != "Usuari"){ ?>
+              <a class="dropdown-item" href="/index.php?r=register">Crear compta</a>
+            <?php } ?>
+            <a class="dropdown-item" href="/index.php?r=user">Perfil</a>
             <a class="dropdown-item" href="/index.php?r=dologout">Tencar Sesió</a>
           </ul>
         </div>
