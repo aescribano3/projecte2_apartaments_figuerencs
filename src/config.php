@@ -15,4 +15,9 @@ $config = [
 
 include "../src/models/Db.php";
 include "../src/models/Users.php";
-include "../src/models/Apartment.php";
+include "../src/models/Apartament.php";
+
+/*include "../src/models/Serveis.php";
+include "../src/models/ServeisApartaments.php";
+include "../src/models/Images.php";
+include "../src/models/Temporada.php";*/

@@ -44,7 +44,23 @@ class Container
 
     public function apartaments()
     {
-        return new \Apartaments\Apartment($this->sql);
+        return new \Apartaments\Apartament($this->sql);
     }
-
+/*
+    public function serveis()
+    {
+        return new \Apartaments\Serveis($this->sql);
+    }
+    public function serveisapartaments()
+    {
+        return new \Apartaments\ServeisApartaments($this->sql);
+    }
+    public function images()
+    {
+        return new \Apartaments\Images($this->sql);
+    }
+    public function temporada()
+    {
+        return new \Apartaments\Temporada($this->sql);
+    }*/
 }
