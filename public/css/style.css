@@ -67,3 +67,7 @@ body{
 #userx{
     background-color: #000099;
 }
+#map{
+    height: 400px;
+    width: 100%;
+}

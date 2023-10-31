@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="steelsheet" href="https://unkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-    <script src="https://unkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="icon" type="image/png" href="/img/logo_renting.png">
     <link rel="stylesheet" href="/css/style.css">
     <title>Content</title>
@@ -43,46 +43,46 @@
 <!--Slider -->
 <div class="row me-0 ms-3">
   <!-- start col-8 -->
-    <div class="col-8 mt-3"> 
-        <div class="col-12">
+    <div class="col-md-8 mt-3"> 
         <h1 class="text-white ">450.000€</h1>
-        </div>
         <div class="container-text">
             <p class="text-white">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
             </p>
         </div>
-        <div class="col-12">
-            <h1 class="text-white ">Característiques</h1>
-        </div>
+        <h1 class="text-white">Característiques</h1>
         <div class="row col-6">
             <div class="col-3">
                 <i class="fa-solid fa-person-swimming" style="color: #ffffff;"></i>
+                <p class="text-white">Piscina</p>
             </div>
             <div class="col-3">
                 <i class="fa-solid fa-wifi" style="color: #ffffff;"></i>
+                <p class="text-white">Wi-Fi</p>
             </div>
             <div class="col-3">
                 <i class="fa-solid fa-square-parking" style="color: #ffffff;"></i>
+                <p class="text-white">Parking</p>
             </div>
             <div class="col-3">
                 <i class="fa-solid fa-temperature-quarter" style="color: #ffffff;"></i>
+                <p class="text-white">Calefacció</p>
             </div>
         </div>
-        <!-- Google map -->
+        <!-- Map -->
         <div class="row mt-3">
             <div class="col-12">
-                <div id="map" class="z-depth-1-half map-container mb-3" style="height: 500px;">
+                <div id="map" class="z-depth-1-half map-container mb-3">
                 </div>
             </div>
         </div>
     </div>
 
 <!-- Formul -->
-    <div class="col-3 mt-2">
+    <div class="col-md-4">
         <div class="sticky-top" style="z-index: 1;">
             <form action="https://www.fotocasa.es/es/" method="POST">
-                <div class="row gx-5 gy-4 text-center justify-content-center mt-3">
+                <div class="row gx-5 gy-4 text-center justify-content-center m-3">
                     <h4 class="text-light">Reservar Apartament</h4>
                     <div class="col-md-8 shadow-lg input-col">
                         <label for="rsv-email">Correu Electronic</label>

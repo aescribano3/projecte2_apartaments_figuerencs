@@ -54,7 +54,7 @@ $( function() {
 
   });
 
-var mymap = L.map('mapid').setView([41.3851, 2.1734], 13);
-L.titleLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 
+var mymap = L.map('map').setView([41.3851, 2.1734], 17);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: 
 '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(mymap);
 let marker = L.marker([41.3851, 2.1734]).addTo(mymap);
