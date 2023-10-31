@@ -43,27 +43,59 @@
     </div>
     <div class="container-md">
         <div class="row">
-
+            <div class="col-md-8">
+                
             <a href="/index.php?r=content" class="text-decoration-none">
-                <div class="col-8">
                     <div class="card mb-3 mt-5" style="max-width: 800px;">
                         <div class="row g-0">
                             <div class="col-md-5">
                             <img src="/img/apartamento_portada_1.webp" class="img-fluid rounded-start" alt="apartament">
                             </div>
                             <div class="col-md-7">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+
+                <a href="/index.php?r=content" class="text-decoration-none col-8">
+                    <div class="card mb-3 mt-5" style="max-width: 800px;">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                            <img src="/img/apartamento_portada_1.webp" class="img-fluid rounded-start" alt="apartament">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/index.php?r=content" class="text-decoration-none col-8">
+                    <div class="card mb-3 mt-5" style="max-width: 800px;">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                            <img src="/img/apartamento_portada_1.webp" class="img-fluid rounded-start" alt="apartament">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
             </div>
-            <div class="col-4 text-white mt-5 mb-5 text-center">
+
+            <div class="col-md-4 text-white mt-5 mb-5 text-center">
                 <div class="sticky-top" style="z-index: 1;">
                     <h4 class="mb-3">Cerca d'apartaments</h4>
                     <form action="/index?r=" method="POST">

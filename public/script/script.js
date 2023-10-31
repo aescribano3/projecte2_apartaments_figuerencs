@@ -1,13 +1,13 @@
 //Rango fecha index
 $( function() {
     var dateFormat = "mm/dd/yy",
-      from = $( ".from" )
+      from = $(".from")
         .datepicker({
           defaultDate: "+1w",
           changeMonth: true,
           numberOfMonths: 2
         })
-        .on( "change", function() {
+        .on("change", function() {
           to.datepicker( "option", "minDate", getDate( this ) );
         }),
       to = $( ".to" ).datepicker({

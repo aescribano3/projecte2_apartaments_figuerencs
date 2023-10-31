@@ -69,25 +69,25 @@
                 </div>
                 <div class="col-md-2 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="apt-pisc" name="apt-pisc" id="checkPiscina">
+                        <input class="form-check-input" type="checkbox" value="1" name="apt-pisc" id="checkPiscina">
                         <label class="form-check-label" for="checkPiscina">
                         <i class="fa-solid fa-water-ladder me-2" style="color: #195dd2;"></i>Piscina
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="apt-park" name="apt-park" id="checkParking">
+                        <input class="form-check-input" type="checkbox" value="2" name="apt-park" id="checkParking">
                         <label class="form-check-label" for="checkParking">
                         <i class="fa-solid fa-square-parking me-2" style="color: #115ee4;"></i>Parking
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="apt-wifi" name="apt-wifi" id="checkWifi">
+                        <input class="form-check-input" type="checkbox" value="3" name="apt-wifi" id="checkWifi">
                         <label class="form-check-label" for="checkWifi">
                         <i class="fa-solid fa-wifi me-2" style="color: #104bb2;"></i>Wi-Fi
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="apt-cale" name="apt-cale" id="checkCalefaccio">
+                        <input class="form-check-input" type="checkbox" value="4" name="apt-cale" id="checkCalefaccio">
                         <label class="form-check-label" for="checkCalefaccio">
                         <i class="fa-solid fa-temperature-full me-2" style="color: #1d5cc9;"></i>Calefacció
                         </label>
