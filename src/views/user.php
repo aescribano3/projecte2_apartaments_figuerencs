@@ -16,7 +16,7 @@
 <body>
     <?php include("header.php"); ?>
 
-<div id="userx" class="row me-0 bg-info">
+<div id="userx" class="row me-0 bg-grey">
   <div class="col-md-2 text-white text-center">
       <p class="mt-3 fs-2" id="enlace-dades">Dades</p>
       <p class="mt-3 fs-2" id="enlace-historial">Historial</p>

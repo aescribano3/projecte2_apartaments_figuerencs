@@ -31,7 +31,7 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-3 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="apt-cp">Codi Postal</label>
-                    <input type="text" class="form-control-plaintext" name="apt-cp"  placeholder="Codi Postal" required>
+                    <input type="text" class="form-control-plaintext" name="apt-cp"  id="apt-cp" placeholder="Codi Postal" required>
                 </div>
                 <div class="col-md-3 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="apt-habt">Numero d'Habitacions</label>
