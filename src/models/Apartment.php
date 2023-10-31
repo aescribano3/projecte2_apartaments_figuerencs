@@ -19,4 +19,30 @@ class Apartment {
 
         return $apartaments;
     }
+
+    public function upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_diamaxcancel, $idUsuari){
+
+        $stm = $this->sql->prepare('INSERT INTO apartaments (idUsuari,diaMaximCancel, latitud, longitud, habitacions, titol, descripcio, preuTA, preuTB, metresCuadrats, adreca, codiPostal) VALUES (:usuari,:diacancel, :latitud, :longitud, :habts, :nom, :descripcion, :preuta, :preutb, :metr, :adreca, :codipostal)');
+        $stm->execute([
+            ':usuari' => $idUsuari,
+            ':nom' => $apt_name,
+            ':adreca' => $apt_adreca,
+            ':codipostal' => $apt_cp,
+            ':habts' => $apt_habts,
+            ':metr' => $apt_metr,
+            ':latitud' => $apt_lat,
+            ':longitud' => $apt_lon,
+            ':preuta' => $apt_pta,
+            ':preutb' => $apt_ptb,
+            ':descripcion' => $apt_desc,
+            ':diacancel' => $apt_diamaxcancel,
+        ]);
+    
+        $lastInsertId = $this->sql->lastInsertId();
+    
+        return $lastInsertId;
+    
+                
+                
+    }
 }

@@ -20,12 +20,12 @@ class serveis {
         return $serveis;
 }
 
-    public function upload($apt_pics,$apt_wifi, $apt_park,$apt_cale,$idApartament){
+    /*public function upload($apt_pics,$apt_wifi, $apt_park,$apt_cale,$idApartament){
         if($apt_pics != NULL){
             $stm = $this->sql->prepare('INSERT INTO serveisapartaments (idServei, idApartament) VALUES (:idServei, :idApartament)');
             $stm->execute([
                 ':idServei' =>
             ])
         }
-    }
+    }*/
 }
