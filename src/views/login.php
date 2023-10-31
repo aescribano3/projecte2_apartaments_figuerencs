@@ -20,14 +20,14 @@
         <div class="row gx-5 gy-4 text-center justify-content-center">
             <div class="col-md-8 shadow-lg input-col">
                 <label for="user-mail">Correu Electronic</label>
-                <input type="email" name="user-mail" class="form-control-plaintext" id="user-mail" placeholder="Correu Electronic">
+                <input type="email" name="user-mail" class="form-control-plaintext" id="user-mail" placeholder="Correu Electronic" required>
             </div>
             <div class="col-md-8 shadow-lg input-col">
                 <label for="user-pass">Contraseña</label>
-                <input type="password" name="user-pass" class="form-control-plaintext" id="user-pass" placeholder="Contraseña"> 
+                <input type="password" name="user-pass" class="form-control-plaintext" id="user-pass" placeholder="Contraseña" required> 
             </div>
             <button type="button" class="btn btn-dark btn-lg btn-block shadow-lg col-md-8" onclick="window.location.href='/index.php?r='">Cancelar</button>
-                <button type="button" class="btn btn-warning btn-lg btn-block shadow-lg col-md-8" onclick="window.location.href='/index.php?r=register'">Registrar-se</button>
+            <button type="button" class="btn btn-warning btn-lg btn-block shadow-lg col-md-8" onclick="window.location.href='/index.php?r=register'">Registrar-se</button>
             <button type="submit" class="btn btn-success btn-lg btn-block shadow-lg col-md-8">Iniciar sesió</button>
 
         </div>

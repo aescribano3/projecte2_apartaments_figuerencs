@@ -102,9 +102,9 @@
                         <div class="row mb-3">
                             <div class="col-5">
                                 <div class="mb-3">
-                                    <select class="form-select" id="nHabitacions">
-                                        <option selected>Habitacions</option>
-                                        <option value="1">1</option>
+                                    <label for="habitacions">Numero d'habitacions</label>
+                                    <select class="form-select" id="habitacions">
+                                        <option value="1" selected>1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4 +</option>
@@ -114,7 +114,8 @@
                             <div class="col-2"></div>
                             <div class="col-5">
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Codi Postal">
+                                    <label for="codipostal"></label>
+                                    <input type="text" class="form-control" id="codipostal" name="search-cv" placeholder="Codi Postal">
                                 </div>
                             </div>
                         </div>
