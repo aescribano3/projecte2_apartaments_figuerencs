@@ -18,31 +18,9 @@
 <body>
     <?php include("header.php"); ?>
 
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/img/casa1.jpg" class="d-block w-100" alt="img1">
-    </div>
-    <div class="carousel-item">
-      <img src="/img/casa2.jpg" class="d-block w-100" alt="img2">
-    </div>
-    <div class="carousel-item">
-      <img src="/img/casa3.jpg" class="d-block w-100" alt="img3">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-<div>
-    
-<!--Slider -->
+    <img src="/img/casa1.jpg" class="d-block w-100" alt="img1">    
+
 <div class="row me-0 ms-3">
-  <!-- start col-8 -->
     <div class="col-md-8 mt-3"> 
         <h1 class="text-white ">450.000€</h1>
         <div class="container-text">
@@ -78,7 +56,7 @@
         </div>
     </div>
 
-<!-- Formul -->
+    <!-- Form -->
     <div class="col-md-4">
         <div class="sticky-top" style="z-index: 1;">
             <form action="https://www.fotocasa.es/es/" method="POST">
