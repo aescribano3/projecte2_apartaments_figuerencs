@@ -11,13 +11,13 @@ class Apartment {
     }
 
     public function getAll(){
-        $apartaments = array();
+        $apts = array();
         $query = "select * from apartaments;";
         foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $apt) {
-            $apartaments[] = $apt;
+            $apts[] = $apt;
         }
 
-        return $apartaments;
+        return $apts;
     }
 
     public function getAptData($id){

@@ -129,57 +129,25 @@
                         </div>
                     </div>
                 </div>
-
-                <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <div class="card m-5" style="max-width: 800px;">
-                        <div class="row g-0">
-                            <div class="col-md-5">
-                            <img src="/img/apartamento_portada_1.webp" class="img-fluid rounded-start" alt="apartament">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title">Titol Apartament</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-body-secondary">Tencat</small></p>
+                
+                <?php foreach($apts as $i => $apt) { ?>
+                    <a id="<?=$apt["idApartament"]?>"class="text-decoration-none Apt-Model-Show" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="card m-5" style="max-width: 800px;">
+                            <div class="row g-0">
+                                <div class="col-md-5">
+                                <img src="/img/apartamento_portada_1.webp" class="img-fluid rounded-start h-100" alt="apartament">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?=$apt["titol"]; ?></h5>
+                                        <p class="card-text"><?=$apt["descripcio"]; ?></p>
+                                        <p class="card-text"><small class="text-body-secondary">Obert</small></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-
-                <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <div class="card m-5" style="max-width: 800px;">
-                        <div class="row g-0">
-                            <div class="col-md-5">
-                            <img src="/img/apartamento_portada_1.webp" class="img-fluid rounded-start" alt="apartament">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-body-secondary">Manteniment</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <div class="card m-5" style="max-width: 800px;">
-                        <div class="row g-0">
-                            <div class="col-md-5">
-                            <img src="/img/apartamento_portada_1.webp" class="img-fluid rounded-start" alt="apartament">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-body-secondary">Obert</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                <?php } ?>
 
             </div>
             <div class="col-md-4 text-white mt-5 mb-5 text-center d-sm-none d-md-block">
