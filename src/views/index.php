@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="icon" type="image/png" href="/img/logo_renting.png">
     <link rel="stylesheet" href="/css/style.css">
     <title>Index</title>
@@ -44,8 +46,91 @@
     <div class="container-md">
         <div class="row">
             <div class="col-md-8">
-                
-            <a href="/index.php?r=content" class="text-decoration-none">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Titol Apartament</h1>
+                                <p class="modal-title fs-5 ms-3">Estat apartament: Obert</p>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="/img/casa1.jpg" class="d-block w-100" alt="img1">
+                                <div class="row me-0 ms-3">
+                                    <div class="col-md-12 mt-3"> 
+                                        <h1 class="">450.000€</h1>
+                                        <div class="container-text">
+                                            <p class="">
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+                                            </p>
+                                        </div>
+                                        <h1 class="">Característiques</h1>
+                                        <div class="row col-md-12">
+                                            <div class="col-md-3">
+                                                <i class="fa-solid fa-person-swimming" style="color: #000000;"></i>
+                                                <p class="">Piscina</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <i class="fa-solid fa-wifi" style="color: #000000;"></i>
+                                                <p class="">Wi-Fi</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <i class="fa-solid fa-square-parking" style="color: #000000;"></i>
+                                                <p class="">Parking</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <i class="fa-solid fa-temperature-quarter" style="color: #000000;"></i>
+                                                <p class="">Calefacció</p>
+                                            </div>
+                                        </div>
+                                        <!-- Map -->
+                                        <div class="row mt-3">
+                                            <div class="col-md-12">
+                                                <div id="map" class="z-depth-1-half map-container mb-3">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Form -->
+                                    <div class="col-md-12">
+                                        <div class="sticky-top" style="z-index: 1;">
+                                            <form action="https://www.fotocasa.es/es/" method="POST">
+                                                <div class="row gx-5 gy-4 text-center justify-content-center m-3">
+                                                    <h4 class="">Reservar Apartament</h4>
+                                                    <div class="col-md-8 shadow-lg input-col">
+                                                        <label for="rsv-email">Correu Electronic</label>
+                                                        <input type="email" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email">
+                                                    </div>
+                                                    <div class="col-md-8 shadow-lg input-col">
+                                                        <label for="rsv-telef" class>Telefon</label>
+                                                        <input type="text" class="form-control-plaintext" name="rsv-telef" id="rsv-telef" placeholder="Telefon"> 
+                                                    </div>
+                                                    <div class="col-md-8 shadow-lg input-col">
+                                                        <label for="rsv-pers">Persones</label>
+                                                        <input type="text" class="form-control-plaintext" name="rsv-pers" id="rsv-pers" placeholder="Persones"> 
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label for="from">Data Inici</label>
+                                                        <input type="text" id="from" name="from" class="form-control mb-3 from">
+                                                        <label for="to">Data Final</label>
+                                                        <input type="text" id="to" name="to" class="form-control mb-3 to">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
+                                                </div>
+                                            </form>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tencar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="card m-5" style="max-width: 800px;">
                         <div class="row g-0">
                             <div class="col-md-5">
@@ -53,7 +138,7 @@
                             </div>
                             <div class="col-md-7">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
+                                    <h5 class="card-title">Titol Apartament</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     <p class="card-text"><small class="text-body-secondary">Tencat</small></p>
                                 </div>
@@ -62,7 +147,7 @@
                     </div>
                 </a>
 
-                <a href="/index.php?r=content" class="text-decoration-none">
+                <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="card m-5" style="max-width: 800px;">
                         <div class="row g-0">
                             <div class="col-md-5">
@@ -79,7 +164,7 @@
                     </div>
                 </a>
 
-                <a href="/index.php?r=content" class="text-decoration-none">
+                <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="card m-5" style="max-width: 800px;">
                         <div class="row g-0">
                             <div class="col-md-5">
@@ -97,7 +182,6 @@
                 </a>
 
             </div>
-
             <div class="col-md-4 text-white mt-5 mb-5 text-center d-sm-none d-md-block">
                 <div class="sticky-top" style="z-index: 1;">
                     <h4 class="mb-3">Cerca d'apartaments</h4>
