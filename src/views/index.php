@@ -47,7 +47,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Titol Apartament</h1>
@@ -99,6 +99,12 @@
                                                 <div class="row gx-5 gy-4 text-center justify-content-center m-3">
                                                     <h4 class="">Reservar Apartament</h4>
                                                     <div class="col-md-8 shadow-lg input-col">
+                                                        <label for="from">Data Inici</label>
+                                                        <input type="text" id="from" name="from" class="form-control mb-3 from">
+                                                        <label for="to">Data Final</label>
+                                                        <input type="text" id="to" name="to" class="form-control mb-3 to">
+                                                    </div>
+                                                    <div class="col-md-8 shadow-lg input-col">
                                                         <label for="rsv-email">Correu Electronic</label>
                                                         <input type="email" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email">
                                                     </div>
@@ -110,12 +116,6 @@
                                                         <label for="rsv-pers">Persones</label>
                                                         <input type="text" class="form-control-plaintext" name="rsv-pers" id="rsv-pers" placeholder="Persones"> 
                                                     </div>
-                                                    <div class="col-md-8">
-                                                        <label for="from">Data Inici</label>
-                                                        <input type="text" id="from" name="from" class="form-control mb-3 from">
-                                                        <label for="to">Data Final</label>
-                                                        <input type="text" id="to" name="to" class="form-control mb-3 to">
-                                                    </div>
                                                     <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
                                                 </div>
                                             </form>   
@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tencar</button>
+
                             </div>
                         </div>
                     </div>
