@@ -2,7 +2,7 @@
 
 namespace Apartaments;
 
-class serveis {
+class Serveis {
 
     public $sql;
 

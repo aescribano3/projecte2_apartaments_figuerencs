@@ -20,6 +20,17 @@ class Apartment {
         return $apartaments;
     }
 
+    public function getAptData($id){
+        $stm = $this->sql->prepare("select * from apartaments where idApartament=:id;");
+        $stm -> execute([':id' => $id]);
+        $result = $stm->fetch(\PDO::FETCH_ASSOC);
+        if($result){
+            return $result;
+        } else {
+            return false;
+        }
+    }
+
     public function upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_diamaxcancel, $idUsuari){
 
         $stm = $this->sql->prepare('INSERT INTO apartaments (idUsuari,diaMaximCancel, latitud, longitud, habitacions, titol, descripcio, preuTA, preuTB, metresCuadrats, adreca, codiPostal) VALUES (:usuari,:diacancel, :latitud, :longitud, :habts, :nom, :descripcion, :preuta, :preutb, :metr, :adreca, :codipostal)');
@@ -37,6 +48,7 @@ class Apartment {
             ':descripcion' => $apt_desc,
             ':diacancel' => $apt_diamaxcancel,
         ]);
+        
     
         $lastInsertId = $this->sql->lastInsertId();
     

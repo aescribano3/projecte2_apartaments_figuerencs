@@ -117,8 +117,8 @@
                 </div>
                 <div class="col-md-3"></div>
                 <div class="col-md-4 shadow-lg border border-dark bg-light border-2 rounded-3">
-                    <label for="apt-imgs">Imatge/s del apartament</label>
-                    <input class="form-control-plaintext" type="file" name="apt-imgs" id="apt-imgs" multiple required>
+                    <label for="apt-imgs">Imatge de l'apartament</label>
+                    <input class="form-control-plaintext" type="file" name="apt-imgs" id="apt-imgs" required>
                 </div>
                 <button type="button" class="btn btn-dark btn-lg btn-block shadow-lg col-md-11" onclick="window.location.href='/index.php?r='">Cancelar</button>
                 <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-11">Crear</button>

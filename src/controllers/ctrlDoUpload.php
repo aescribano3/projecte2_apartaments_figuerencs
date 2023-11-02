@@ -15,13 +15,10 @@ function ctrlDoUpload($request, $response, $container){
     $apt_diamaxcancel = $request->get(INPUT_POST, "apt-diamaxcancel");
     $idUsuari = $_SESSION["user"]["id"];
 
-
-    $apt_pisc = $request->get(INPUT_POST, "1");
-    $apt_wifi = $request->get(INPUT_POST, "2");
-    $apt_park = $request->get(INPUT_POST, "3");
-    $apt_cale = $request->get(INPUT_POST, "4");
-
-    die(var_dump($apt_pisc, $apt_wifi));
+    $apt_pisc = $request->get(INPUT_POST, "apt-pisc");
+    $apt_wifi = $request->get(INPUT_POST, "apt-wifi");
+    $apt_park = $request->get(INPUT_POST, "apt-park");
+    $apt_cale = $request->get(INPUT_POST, "apt-cale");
 
     $data_ini_alta = $request->get(INPUT_POST, "data-ini-alta");
     $data_fin_alta = $request->get(INPUT_POST, "data-fin-alta");
@@ -44,11 +41,11 @@ function ctrlDoUpload($request, $response, $container){
     
     $aptModel = $container->apartaments();
 
-    $aptModel = $aptModel->upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_diamaxcancel,$idUsuari);
-    $idApartament = $lastInsertId;
-    $serModel = $container->serveis();
+    $aptId = $aptModel->upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_diamaxcancel, $idUsuari);
 
-    //$serveimodel = $serveiModel->upload();
+    $serModel = $container->serveisapartaments();
+
+    $serModel = $serModel->upload($apt_pisc, $apt_wifi, $apt_park, $apt_cale, $aptId);
 
 
 

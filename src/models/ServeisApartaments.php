@@ -2,7 +2,7 @@
 
 namespace Apartaments;
 
-class serveis {
+class ServeisApartaments {
 
     public $sql;
 
@@ -20,12 +20,35 @@ class serveis {
         return $serveis;
 }
 
-    /*public function upload($apt_pics,$apt_wifi, $apt_park,$apt_cale,$idApartament){
+    public function upload($apt_pics, $apt_wifi, $apt_park, $apt_cale, $aptId){
         if($apt_pics != NULL){
             $stm = $this->sql->prepare('INSERT INTO serveisapartaments (idServei, idApartament) VALUES (:idServei, :idApartament)');
             $stm->execute([
-                ':idServei' =>
-            ])
+                ':idServei' => $apt_pics,
+                ':idApartament' => $aptId,
+            ]);
         }
-    }*/
+        if($apt_wifi != NULL){
+            $stm = $this->sql->prepare('INSERT INTO serveisapartaments (idServei, idApartament) VALUES (:idServei, :idApartament)');
+            $stm->execute([
+                ':idServei' => $apt_wifi,
+                ':idApartament' => $aptId,
+            ]);
+        }
+        if($apt_park != NULL){
+            $stm = $this->sql->prepare('INSERT INTO serveisapartaments (idServei, idApartament) VALUES (:idServei, :idApartament)');
+            $stm->execute([
+                ':idServei' => $apt_park,
+                ':idApartament' => $aptId,
+            ]);
+        }
+        if($apt_cale != NULL){
+            $stm = $this->sql->prepare('INSERT INTO serveisapartaments (idServei, idApartament) VALUES (:idServei, :idApartament)');
+            $stm->execute([
+                ':idServei' => $apt_cale,
+                ':idApartament' => $aptId,
+            ]);
+        }
+    }
+    
 }
