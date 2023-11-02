@@ -4,9 +4,9 @@
   </a>
   <a class="navbar-brand" href="/index.php?r=">Apartaments Figuerencs</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
       <?php if($_SESSION["rol"] != "Usuari"){ ?>
         <li class="nav-item">
@@ -14,19 +14,85 @@
         </li>
       <?php } ?>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-user me-2"></i>Usuari
-          </a>
-          <ul class="dropdown-menu">
-            <a class="dropdown-item" href="/index.php?r=login">Login</a>
-            <?php if($_SESSION["rol"] != "Usuari"){ ?>
-              <a class="dropdown-item" href="/index.php?r=register">Crear compta</a>
-            <?php } ?>
-            <a class="dropdown-item" href="/index.php?r=user">Perfil</a>
-            <a class="dropdown-item" href="/index.php?r=dologout">Tencar Sesió</a>
-          </ul>
-        </div>
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-user me-2"></i>Usuari
+        </a>
+        <ul class="dropdown-menu">
+          <a class="dropdown-item" href="/index.php?r=login">Login</a>
+          <?php if($_SESSION["rol"] != "Usuari"){ ?>
+            <a class="dropdown-item" href="/index.php?r=register">Crear compta</a>
+          <?php } ?>
+          <a class="dropdown-item" href="/index.php?r=user">Perfil</a>
+          <a class="dropdown-item" href="/index.php?r=dologout">Tencar Sesió</a>
+        </ul>
       </li>
     </ul>
+    <div class="col-md-4 text-white mt-5 mb-5 text-center d-none d-sm-block d-md-none">
+          <div class="sticky-top" style="z-index: 1;">
+              <form action="/index?r=" method="POST">
+                  <div class="row mb-2">
+                      <div class="col-3">
+                          <div class="mb-3">
+                              <label for="habitacions">Numero d'habitacions</label>
+                              <select class="form-select" id="habitacions">
+                                  <option value="1" selected>1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4 +</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-1"></div>
+                      <div class="col-3">
+                          <div class="mb-3">
+                              <label for="codipostal">Codi Postal</label>
+                              <input type="text" class="form-control" id="codipostal" name="search-cv" placeholder="Codi Postal">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row mb-3">
+                      <div class="col-7">
+                          <div class="mb-3">
+                              <label for="from">Data Inici</label>
+                              <input type="text" id="from" name="from" class="form-control mb-3 from">
+                              <label for="to">Data Final</label>
+                              <input type="text" id="to" name="to" class="form-control to">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row mb-3 text-center" style="z-index: -1;">
+                      <div class="col-6">
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="Piscina" id="checkPiscina">
+                              <label class="form-check-label" for="checkPiscina">
+                              <i class="fa-solid fa-water-ladder me-4" style="color: #195dd2;"></i>Piscina
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="Parking" id="checkParking">
+                              <label class="form-check-label" for="checkParking">
+                              <i class="fa-solid fa-square-parking me-4" style="color: #115ee4;"></i>Parking
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-6">
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="Wifi" id="checkWifi">
+                              <label class="form-check-label" for="checkWifi">
+                              <i class="fa-solid fa-wifi me-4" style="color: #104bb2;"></i>Wi-Fi
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="Calefaccio" id="checkCalefaccio">
+                              <label class="form-check-label" for="checkCalefaccio">
+                              <i class="fa-solid fa-temperature-full me-4" style="color: #1d5cc9;"></i>Calefacció
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block col-md-12"><img src="/img/lupa_icon.png" alt="Buscar" width="30" height="30"></button>
+              </form>
+          </div>
+      </div>
   </div>
 </nav>

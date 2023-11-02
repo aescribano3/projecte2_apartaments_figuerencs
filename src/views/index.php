@@ -46,7 +46,7 @@
             <div class="col-md-8">
                 
             <a href="/index.php?r=content" class="text-decoration-none">
-                    <div class="card mb-3 mt-5" style="max-width: 800px;">
+                    <div class="card m-5" style="max-width: 800px;">
                         <div class="row g-0">
                             <div class="col-md-5">
                             <img src="/img/apartamento_portada_1.webp" class="img-fluid rounded-start" alt="apartament">
@@ -55,14 +55,15 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-body-secondary">Tencat</small></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </a>
 
-                <a href="/index.php?r=content" class="text-decoration-none col-8">
-                    <div class="card mb-3 mt-5" style="max-width: 800px;">
+                <a href="/index.php?r=content" class="text-decoration-none">
+                    <div class="card m-5" style="max-width: 800px;">
                         <div class="row g-0">
                             <div class="col-md-5">
                             <img src="/img/apartamento_portada_1.webp" class="img-fluid rounded-start" alt="apartament">
@@ -71,14 +72,15 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-body-secondary">Manteniment</small></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </a>
 
-                <a href="/index.php?r=content" class="text-decoration-none col-8">
-                    <div class="card mb-3 mt-5" style="max-width: 800px;">
+                <a href="/index.php?r=content" class="text-decoration-none">
+                    <div class="card m-5" style="max-width: 800px;">
                         <div class="row g-0">
                             <div class="col-md-5">
                             <img src="/img/apartamento_portada_1.webp" class="img-fluid rounded-start" alt="apartament">
@@ -87,6 +89,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-body-secondary">Obert</small></p>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +98,7 @@
 
             </div>
 
-            <div class="col-md-4 text-white mt-5 mb-5 text-center">
+            <div class="col-md-4 text-white mt-5 mb-5 text-center d-sm-none d-md-block">
                 <div class="sticky-top" style="z-index: 1;">
                     <h4 class="mb-3">Cerca d'apartaments</h4>
                     <form action="/index?r=" method="POST">
@@ -114,7 +117,7 @@
                             <div class="col-2"></div>
                             <div class="col-5">
                                 <div class="mb-3">
-                                    <label for="codipostal"></label>
+                                    <label for="codipostal">Codi Postal</label>
                                     <input type="text" class="form-control" id="codipostal" name="search-cv" placeholder="Codi Postal">
                                 </div>
                             </div>
