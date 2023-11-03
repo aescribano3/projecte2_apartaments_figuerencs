@@ -24,6 +24,7 @@ class Apartment {
         $stm = $this->sql->prepare("select * from apartaments where idApartament=:id;");
         $stm -> execute([':id' => $id]);
         $result = $stm->fetch(\PDO::FETCH_ASSOC);
+        die(var_dump($result));
         if($result){
             return $result;
         } else {

@@ -38,7 +38,7 @@ $(document).ready(function () {
       url: '/Apartment/getAptData?AptId=' + AptId,
       type: 'GET',
       success: function (data) {
-        $('#modal-content').html(data);
+        $(".AptTitol").html(data['titol']);
         $('#exampleModal').modal('show');
       },
       error: function (error) {

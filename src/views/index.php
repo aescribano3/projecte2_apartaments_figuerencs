@@ -48,10 +48,10 @@
             <div class="col-md-8">
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <!-- <div class="modal-dialog modal-lg">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Titol Apartament</h1>
+                                <h1 class="modal-title fs-5 AptTitol" id="exampleModalLabel">Titol Apartament</h1>
                                 <p class="modal-title fs-5 ms-3">Estat apartament: Obert</p>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
@@ -84,7 +84,7 @@
                                                 <p class="">Calefacció</p>
                                             </div>
                                         </div>
-                                        Map 
+                                        <!--Map--> 
                                         <div class="row mt-3">
                                             <div class="col-md-12">
                                                 <div id="map" class="z-depth-1-half map-container mb-3">
@@ -93,7 +93,7 @@
                                         </div>
                                     </div>
 
-                                    Form
+                                    <!--Form-->
                                     <div class="col-md-12">
                                         <div class="sticky-top" style="z-index: 1;">
                                             <form action="https://www.fotocasa.es/es/" method="POST">
@@ -127,7 +127,7 @@
                             <div class="modal-footer">
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
                 
                 <?php foreach($apts as $i => $apt) { ?>
