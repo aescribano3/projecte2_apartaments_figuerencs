@@ -20,17 +20,15 @@ class Apartment {
         return $apts;
     }
 
-    public function getAptData($id){
+    public function getAptData($id) {
         $stm = $this->sql->prepare("select * from apartaments where idApartament=:id;");
-        $stm -> execute([':id' => $id]);
+        $stm->execute([':id' => $id]);
         $result = $stm->fetch(\PDO::FETCH_ASSOC);
-        die(var_dump($result));
-        if($result){
-            return $result;
-        } else {
-            return false;
-        }
+        $html = '<h1 class="modal-title fs-5">' . $result["titol"] . '</h1>';
+    
+        return $html;
     }
+    
 
     public function upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_diamaxcancel, $idUsuari){
 

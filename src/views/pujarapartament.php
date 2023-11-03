@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-md-8 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="apt-desc">Descripció del apartament</label>
-                    <textarea class="form-control-plaintext" name="apt-desc" id="apt-desc" rows="3" placeholder="Descripció" required></textarea>
+                    <textarea class="form-control-plaintext" name="apt-desc" id="apt-desc" rows="3" placeholder="Descripció" required maxlength="300"></textarea>
                 </div>
                 <div class="col-md-1">
                 </div>
