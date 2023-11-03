@@ -11,13 +11,13 @@ class Temporada {
     }
 
     public function getAll(){
-        $imgApartament = array();
+        $temporada = array();
         $query = "select * from temporada;";
-        foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $img) {
-            $imgApartament[] = $img;
+        foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $temp) {
+            $temporada[] = $temp;
         }
 
-        return $imgApartament;
+        return $temporada;
     }
 
 

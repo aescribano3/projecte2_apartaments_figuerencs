@@ -59,9 +59,9 @@ class Container
     {
         return new \Apartaments\Imatge($this->sql);
     }
-    /*
+   
     public function temporada()
     {
         return new \Apartaments\Temporada($this->sql);
-    }*/
+    }
 }

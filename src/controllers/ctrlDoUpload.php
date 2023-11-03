@@ -38,31 +38,37 @@ function ctrlDoUpload($request, $response, $container){
     
     $imgModel = $container->imatge();
 
-   // Obtener las imágenes subidas
-if (isset($_FILES['apt-img'])) {
-    $imgFiles = $_FILES['apt-img'];
+        // Obtener las imágenes subidas
+        if (isset($_FILES['apt-img'])) {
+            $imgFiles = $_FILES['apt-img'];
 
-    // Ruta donde se almacenarán las imágenes subidas (ajusta la ruta a tu configuración)
-    $uploadDirectory = '../public/img/';
+            // Ruta donde se almacenarán las imágenes subidas (ajusta la ruta a tu configuración)
+            $uploadDirectory = '../public/img/';
 
-    foreach ($imgFiles['name'] as $key => $imageName) {
-        // Verificar si no hubo errores en la carga
-        if ($imgFiles['error'][$key] === UPLOAD_ERR_OK) {
-            // Nombre del archivo
-            $imgPath = $uploadDirectory . $imageName;
+        foreach ($imgFiles['name'] as $key => $imageName) {
+            // Verificar si no hubo errores en la carga
+            if ($imgFiles['error'][$key] === UPLOAD_ERR_OK) {
+                // Nombre del archivo
+                $imgPath = $uploadDirectory . $imageName;
 
-            // Mover la imagen al directorio de destino
-            if (move_uploaded_file($imgFiles['tmp_name'][$key], $imgPath)) {
-                // Obtener el nombre del archivo sin la ruta
-                $imageFileName = pathinfo($imageName, PATHINFO_BASENAME);
+                // Mover la imagen al directorio de destino
+                if (move_uploaded_file($imgFiles['tmp_name'][$key], $imgPath)) {
+                    // Obtener el nombre del archivo sin la ruta
+                    $imageFileName = pathinfo($imageName, PATHINFO_BASENAME);
 
-                // Luego, puedes guardar el nombre del archivo en la base de datos
-                $imgModel = $container->imatge();
-                $imgModel->upload($aptId, $imageFileName);
-            }
-        }
-    }
-}
+                    // Luego, puedes guardar el nombre del archivo en la base de datos
+                    $imgModel = $container->imatge();
+                    $imgModel->upload($aptId, $imageFileName);
+                            }
+                        }
+                    }
+                }
+
+    $aptModel = $container->temporada();
+
+    $tempModel = $tempModel->upload($data_ini_alta, $data_fin_alta, $data_ini_baixa, $data_fin_baixa, $aptId);
+
+
 
 
 
