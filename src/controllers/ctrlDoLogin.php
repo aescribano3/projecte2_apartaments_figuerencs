@@ -6,6 +6,8 @@ function ctrlDoLogin($request, $response, $container){
     $pass = $request->get(INPUT_POST, "user-pass");
     $userModel = $container->users();
 
+    $pass = hash('md5', $pass, false);
+
     $userModel = $userModel->login($email, $pass);
 
     if($userModel) {
