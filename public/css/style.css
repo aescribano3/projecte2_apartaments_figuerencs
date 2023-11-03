@@ -55,10 +55,10 @@ body{
 }
 
 
-#enlace-dades, #enlace-historial, #enlace-reserves {
-    margin-bottom: 150px; /* Ajusta el valor según la separación deseada */
+#enlace-dades, #enlace-historial, #enlace-reserves, #enlace-usuarios {
+    margin-bottom: 100px; /* Ajusta el valor según la separación deseada */
   }
-  #contenido-dades, #contenido-historial, #contenido-reserves {
+  #contenido-dades, #contenido-historial, #contenido-reserves, #contenido-usuarios {
     display: none; /* Ocultar todos los elementos al principio */
 }
 #historial{

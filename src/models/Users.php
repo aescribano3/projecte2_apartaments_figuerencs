@@ -10,6 +10,16 @@ class Users {
         $this->sql = $sql;
     }
 
+    public function getAll(){
+        $users = array();
+        $query = "select * from usuari;";
+        foreach ($this->sql->query($query, \PDO::FETCH_ASSOC) as $user) {
+            $users[] = $user;
+        }
+
+        return $users;
+    }
+
     public function getUserData($id){
         $stm = $this->sql->prepare("select * from usuari where id=:id;");
         $stm -> execute([':id' => $id]);
@@ -25,6 +35,7 @@ class Users {
         $stm = $this->sql->prepare('select id, email, rol ,pass from usuari where email=:email;');
         $stm->execute([':email' => $email]);
         $result = $stm->fetch(\PDO::FETCH_ASSOC);
+        //die(var_dump($result["pass"], hash('md5', $pass, false)));
         if(is_array($result) && $result["pass"] == $pass){
             return $result;
         } else {
@@ -45,7 +56,7 @@ class Users {
             ':cognom' => $lastname,
             ':telefon' => $number,
             ':email' => $email,
-            ':pass' => $pass,
+            ':pass' => hash('md5', $pass, false),
             ':cv' => $cv,
             ':rol' => $rol
         ]);
@@ -63,7 +74,7 @@ class Users {
             ':cognom' => $lastname,
             ':telefon' => $number,
             ':email' => $email,
-            ':pass' => $pass,
+            ':pass' => hash('md5', $pass, false),
             ':cv' => $cv
         ]);
         

@@ -21,6 +21,9 @@
       <p class="mt-3 fs-2" id="enlace-dades">Dades</p>
       <p class="mt-3 fs-2" id="enlace-historial">Historial</p>
       <p class="mt-3 fs-2" id="enlace-reserves">Reserves</p>
+      <?php if($_SESSION["rol"] == "Administrador"){ ?>
+        <p class="mt-3 fs-2" id="enlace-usuarios">Usuaris</p>
+      <?php } ?>
   </div>
   
   <!-- Col de dades-->
@@ -30,31 +33,31 @@
       <form action="index.php?r=doupdate" method="POST">
       <div class="row gx-6 gy-4 text-center justify-content-center">
             <div class="col-md-4 shadow-lg input-col">
-                <label for="user-name"><?= $name ?></label>
-                <input type="text" class="form-control-plaintext" id="user-name" name="user-name-update" placeholder="Nom" required>
+                <label for="user-name">Nom</label>
+                <input type="text" class="form-control-plaintext" id="user-name" name="user-name-update" placeholder="Nom" value="<?= $name ?>" required>
             </div>
             <div class="col-md-2"> </div>
             <div class="col-md-4 shadow-lg input-col">
-                <label for="user-lastname"><?= $lastname; ?></label>
-                <input type="text" class="form-control-plaintext" id="user-lastname" name="user-lastname-update" placeholder="Cognoms" required>
+                <label for="user-lastname">Cognoms</label>
+                <input type="text" class="form-control-plaintext" id="user-lastname" name="user-lastname-update" placeholder="Cognoms" value="<?= $lastname; ?>" required>
             </div>
             <div class="col-md-4 shadow-lg input-col">
-                <label for="user-number"><?= $number; ?></label>
-                <input type="text" class="form-control-plaintext" id="user-number" name="user-number-update" placeholder="Numero de telefon" required>
+                <label for="user-number">Telefon</label>
+                <input type="text" class="form-control-plaintext" id="user-number" name="user-number-update" placeholder="Numero de telefon" value="<?= $number; ?>" required>
             </div>
             <div class="col-md-2"> </div>
             <div class="col-md-4 shadow-lg input-col">
-                <label for="user-email"><?= $email; ?></label>
-                <input type="email" class="form-control-plaintext" id="user-email" name="user-email-update" placeholder="Correu electrònic" required>
+                <label for="user-email">Email</label>
+                <input type="email" class="form-control-plaintext" id="user-email" name="user-email-update" placeholder="Correu electrònic" value="<?= $email; ?>" required>
             </div>
             <div class="col-md-4 shadow-lg input-col">
-                <label for="user-pass"><?= $pass; ?></label>
+                <label for="user-pass">Contraseña</label>
                 <input type="password" class="form-control-plaintext" id="user-pass" name="user-pass-update" placeholder="Contrasenya" required>
             </div>
             <div class="col-md-2"> </div>
             <div class="col-md-4 shadow-lg input-col">
-                <label for="user-confpass"><?= $cv; ?></label>
-                <input type="text" class="form-control-plaintext" id="user-confpass" name="user-cv-update" placeholder="Targeta de crèdit" required>
+                <label for="user-confpass">Targeta Credit</label>
+                <input type="text" class="form-control-plaintext" id="user-confpass" name="user-cv-update" placeholder="Targeta de crèdit" value="<?= $cv; ?>" required>
             </div>
             <div class="col-md-6"></div>
             <button type="submit" class="btn btn-info btn-lg btn-block shadow-lg col-md-10 mt-5">Guardar canvis</button>
@@ -81,35 +84,35 @@
           <td>10/05/2023</td>
           <td>15/05/2023</td>
           <td>100€</td>
-          <td>Cancelado</td>
+          <td>Tencada</td>
         </tr>
         <tr class="table-warning">
           <th scope="row">2</th>
           <td>10/05/2023</td>
           <td>15/05/2023</td>
           <td>100€</td>
-          <td>Terminado</td>
+          <td>Tencada</td>
         </tr>
         <tr class="table-warning">
           <th scope="row">3</th>
           <td>15/05/2023</td>
           <td>15/05/2023</td>
           <td>100€</td>
-          <td>En Reserva</td>
+          <td>Oberta</td>
         </tr>
         <tr class="table-warning">
           <th scope="row">4</th>
           <td>15/05/2023</td>
           <td>15/05/2023</td>
           <td>100€</td>
-          <td>En Reserva</td>
+          <td>Oberta</td>
         </tr>
         <tr class="table-warning">
           <th scope="row">5</th>
           <td>15/05/2023</td>
           <td>15/05/2023</td>
           <td>100€</td>
-          <td>En Reserva</td>
+          <td>Oberta</td>
         </tr>
       </tbody>
     </table>
@@ -153,6 +156,36 @@
       </tbody>
     </table>
 </div>
+
+<!--Col de usuaris-->
+<div id="contenido-usuarios" class="col-12">
+    <h1 class="text-white d-flex align-items-center justify-content-center mt-4 mb-4">Usuarios</h1>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr class="table-warning">
+          <th scope="col">Id</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Cognom</th>
+          <th scope="col">Email</th>
+          <th scope="col">Telefon</th>
+          <th scope="col">Rol</th>
+        </tr>
+      </thead>
+      <tbody>
+      <?php foreach($users as $i => $user) { ?>
+        <tr class="table-warning">
+          <th scope="row"><?=$user["id"]?></th>
+          <td><?=$user["nom"]?></td>
+          <td><?=$user["cognom"]?></td>
+          <td><?=$user["email"]?></td>
+          <td><?=$user["telefon"]?></td>
+          <td><?=$user["rol"]?></td>
+        </tr>
+      <?php } ?>
+      </tbody>
+    </table>
+  </div>
+
 </div>
     <?php include("footer.php"); ?>
     <script src="/script/script.js"></script>

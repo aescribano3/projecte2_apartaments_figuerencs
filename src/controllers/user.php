@@ -24,5 +24,11 @@ function ctrlUser($request, $response, $container){
     $response->set("cv", $cv);
     $response->set("rol", $rol);
 
+    $userModel = $container->users();
+
+    $users = $userModel->getAll();
+
+    $response->set("users", $users);
+
     return $response;
 }
