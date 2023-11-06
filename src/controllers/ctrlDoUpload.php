@@ -64,7 +64,12 @@ function ctrlDoUpload($request, $response, $container){
                     }
                 }
 
-    $aptModel = $container->temporada();
+                $data_ini_alta = date('Y-m-d', strtotime(str_replace('/', '-', $data_ini_alta)));
+                $data_fin_alta = date('Y-m-d', strtotime(str_replace('/', '-', $data_fin_alta)));
+                $data_ini_baixa = date('Y-m-d', strtotime(str_replace('/', '-', $data_ini_baixa)));
+                $data_fin_baixa = date('Y-m-d', strtotime(str_replace('/', '-', $data_fin_baixa)));
+
+    $tempModel = $container->temporada();
 
     $tempModel = $tempModel->upload($data_ini_alta, $data_fin_alta, $data_ini_baixa, $data_fin_baixa, $aptId);
 

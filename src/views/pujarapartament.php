@@ -17,7 +17,7 @@
     <?php include("header.php"); ?>
     <div class="container-md shadow-lg px-5 py-5 bg-success mb-5 mt-5 rounded-3" id="uploadApt">
         <h1 class="text-center mb-5 fw-bold text-light" >Pujar un apartament</h1>
-        <form action="index.php?r=doupload" method="POST" enctype="multipart/form-data">
+        <form action="index.php?r=doupload" method="POST">
             <div class="row gx-6 gy-4 text-center justify-content-center">
                 <div class="col-md-3 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="apt-name">Titol Apartament</label>
@@ -95,21 +95,21 @@
                 </div>
                 <div class="col-md-5 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="data-inici-alta">Data Inici Temporada Alta</label>
-                    <input type="text" id="data-inici-alta" name="data-ini-alta" class="form-control from" placeholder="Data Inici Temporada Alta" value="07/01/2023" required>
+                    <input type="text" id="data-inici-alta" name="data-ini-alta" class="form-control from" placeholder="Data Inici Temporada Alta" value="01/07/2023" required>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-5 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="data-final-alta">Data Final Temporada Alta</label>
-                    <input type="text" id="data-final-alta" name="data-fin-alta" class="form-control to" placeholder="Data Final Temporada Alta" value="12/31/2023" required>
+                    <input type="text" id="data-final-alta" name="data-fin-alta" class="form-control to" placeholder="Data Final Temporada Alta" value="31/12/2023" required>
                 </div>
-                <div class="col-md-5 shadow-lg border border-dark bg-light border-2 rounded-3">
+                <div class="col-md-5 shadow-lg border border-dark bg-light border-2 rounded-3"> 
                     <label for="data-inici-baixa">Data Inici Temporada Baixa</label>
                     <input type="text" id="data-inici-baixa" name="data-ini-baixa" class="form-control from" placeholder="Data Inici Temporada Baixa" value="01/01/2023" required>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-5 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="data-final-baixa">Data Final Temporada Baixa</label>
-                    <input type="text" id="data-final-baixa" name="data-fin-baixa" class="form-control to" placeholder="Data Final Temporada Baixa" value="06/30/2023" required>
+                    <input type="text" id="data-final-baixa" name="data-fin-baixa" class="form-control to" placeholder="Data Final Temporada Baixa" value="30/06/2023" required>
                 </div>
                  <div class="col-md-4 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="apt-diamaxcancel">Dies maximas abans de cancelar</label>
@@ -117,8 +117,8 @@
                 </div>
                 <div class="col-md-3"></div>
                 <div class="col-md-4 shadow-lg border border-dark bg-light border-2 rounded-3">
-                    <label for="apt-img">Imatge de l'apartament</label>
-                    <input class="form-control-plaintext" type="file" name="apt-img[]" accept=".jpg, .png" id="apt-img" multiple required>
+                    <label for="apt-imgs">Imatge de l'apartament</label>
+                    <input class="form-control-plaintext" type="file" name="apt-imgs" id="apt-imgs" required>
                 </div>
                 <button type="button" class="btn btn-dark btn-lg btn-block shadow-lg col-md-11" onclick="window.location.href='/index.php?r='">Cancelar</button>
                 <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-11">Crear</button>

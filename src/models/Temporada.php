@@ -20,7 +20,25 @@ class Temporada {
         return $temporada;
     }
 
+    public function upload($data_ini_alta, $data_fin_alta, $data_ini_baixa, $data_fin_baixa, $aptId) {
+        $stm = $this->sql->prepare('INSERT INTO temporada ( idApartament, nom, dataInici, dataFinal) VALUES (:idApartament, :tipus, :datainici, :datafinal)');
+        $stm->execute([
+            ':idApartament' => $aptId,
+            ':tipus' => "Temporada Alta",
+            ':datainici' => $data_ini_alta,
+            ':datafinal' => $data_fin_alta,
+        ]);
+        $stm = $this->sql->prepare('INSERT INTO temporada ( idApartament, nom, dataInici, dataFinal) VALUES (:idApartament, :tipus, :datainicib, :datafinalb)');
+        $stm->execute([
+            ':idApartament' => $aptId,
+            ':tipus' => "Temporada Baixa",
+            ':datainicib' => $data_ini_baixa,
+            ':datafinalb' => $data_fin_baixa,
+        ]);
 
+
+
+    }
 
 
 
