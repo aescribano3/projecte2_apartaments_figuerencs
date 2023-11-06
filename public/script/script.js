@@ -32,9 +32,8 @@ $(document).ready(function () {
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(mymap);
   let marker = L.marker([41.3851, 2.1734]).addTo(mymap);
 
-  $('.Apt-Model-Show').on('click', function (event) {
+  $(".Apt-Model-Show").on("click", function (event) {
     var AptId = $(this).attr('id');
-    alert(AptId);
     $.ajax({
       url: '/index.php?r=aptdata',
       type: 'GET',
