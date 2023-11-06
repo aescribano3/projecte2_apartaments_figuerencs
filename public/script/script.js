@@ -34,6 +34,7 @@ $(document).ready(function () {
 
   $('.Apt-Model-Show').on('click', function (event) {
     var AptId = $(this).attr('id');
+    alert(AptId);
     $.ajax({
       url: '/index.php?r=aptdata',
       type: 'GET',

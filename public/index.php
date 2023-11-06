@@ -41,6 +41,7 @@ if ($r == "login") {
     ctrlRegister($request, $response, $container);
 } elseif ($r == "aptdata") {
     $AptId = $_REQUEST["AptId"];
+    die(var_dump($AptId));
     AptData($request, $response, $container, $AptId);
 } elseif ($r == "user") {
     $response = isLogged($request, $response, $container,"ctrlUser");

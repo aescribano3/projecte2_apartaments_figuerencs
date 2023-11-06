@@ -24,11 +24,12 @@ class Apartment {
         $stm = $this->sql->prepare("select * from apartaments where idApartament=:id;");
         $stm->execute([':id' => $id]);
         $result = $stm->fetch(\PDO::FETCH_ASSOC);
-        $html = '<h1 class="modal-title fs-5">' . $result["titol"] . '</h1>';
-    
-        return $html;
+        if($result){
+            return $result;
+        } else {
+            return false;
+        }
     }
-    
 
     public function upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_diamaxcancel, $idUsuari){
 
