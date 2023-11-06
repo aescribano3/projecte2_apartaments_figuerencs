@@ -34,18 +34,20 @@ $(document).ready(function () {
 
   $('.Apt-Model-Show').on('click', function (event) {
     var AptId = $(this).attr('id');
+    alert(AptId);
     $.ajax({
-      url: '/Apartment/getAptData?AptId=' + AptId,
+      url: '/index.php?r=aptdata',
       type: 'GET',
+      data: {AptId: AptId },
       success: function (data) {
-        $(".AptTitol").html(data['titol']);
+        $('#exampleModal').html(data);
         $('#exampleModal').modal('show');
       },
       error: function (error) {
         console.log(error);
       }
     });
-  });
+});
 
 });
 

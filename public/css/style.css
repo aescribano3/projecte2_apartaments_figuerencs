@@ -56,10 +56,10 @@ body{
 
 
 #enlace-dades, #enlace-historial, #enlace-reserves, #enlace-usuarios {
-    margin-bottom: 100px; /* Ajusta el valor según la separación deseada */
+    margin-bottom: 129px; 
   }
   #contenido-dades, #contenido-historial, #contenido-reserves, #contenido-usuarios {
-    display: none; /* Ocultar todos los elementos al principio */
+    display: none;
 }
 #historial{
     margin-bottom: 100px;

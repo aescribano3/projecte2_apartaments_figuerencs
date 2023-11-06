@@ -20,9 +20,9 @@ class Apartment {
         return $apts;
     }
 
-    public function getAptData($id){
+    public function getAptData($id) {
         $stm = $this->sql->prepare("select * from apartaments where idApartament=:id;");
-        $stm -> execute([':id' => $id]);
+        $stm->execute([':id' => $id]);
         $result = $stm->fetch(\PDO::FETCH_ASSOC);
         die(var_dump($result));
         if($result){

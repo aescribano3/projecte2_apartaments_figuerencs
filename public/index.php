@@ -16,6 +16,7 @@ include "../src/controllers/ctrlDoLogout.php";
 include "../src/controllers/ctrlDoRegister.php";
 include "../src/controllers/ctrlDoUpdate.php";
 include "../src/controllers/ctrlDoUpload.php";
+include "../src/controllers/GetAptDataController.php";
 
 include "../src/middleware/isLogged.php";
 
@@ -37,8 +38,11 @@ if ($r == "login") {
 } elseif ($r === "content") {
     $response = isLogged($request, $response, $container,"ctrlContent");
 } elseif ($r == "register") {
-    //$response = isLogged($request, $response, $container,"ctrlRegister");
     ctrlRegister($request, $response, $container);
+} elseif ($r == "aptdata") {
+    $AptId = $_REQUEST["AptId"];
+    die(var_dump($AptId));
+    AptData($request, $response, $container, $AptId);
 } elseif ($r == "user") {
     $response = isLogged($request, $response, $container,"ctrlUser");
 } elseif ($r == "pujar") {
