@@ -20,3 +20,6 @@ include "../src/models/Serveis.php";
 include "../src/models/ServeisApartaments.php";
 include "../src/models/Images.php";
 include "../src/models/Temporada.php";
+
+/*
+include "../src/models/Reserva,php";*/

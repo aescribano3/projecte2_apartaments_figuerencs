@@ -30,7 +30,8 @@ function ctrlDoUpload($request, $response, $container){
 
     $aptId = $aptModel->upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_diamaxcancel, $idUsuari);
 
-
+    $_SESSION['aptId'] = $aptId; // Almacena el ID del departamento en una variable de sesión
+    
     $serModel = $container->serveisapartaments();
 
     $serModel = $serModel->upload($apt_pisc, $apt_wifi, $apt_park, $apt_cale, $aptId);
