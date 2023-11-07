@@ -18,7 +18,7 @@
     <div class="container text-center">
         <img src="/img/error.png" alt="Error" class="mt-5 mb-5">
         <h1 class="text-light">Ops... algo salio
-        <small class="text-danger">mal</small>
+        <small style="color: red;">mal</small>
         </h1>
     </div>
     <?php include("footer.php"); ?>

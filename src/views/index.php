@@ -48,89 +48,15 @@
             <div class="col-md-8">
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
+                    <div class="modal-dialog">
                         <div class="modal-content">
-                            
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 AptTitol" id="exampleModalLabel">Titol Apartament</h1>
-                                <p class="modal-title fs-5 ms-3">Estat apartament: Obert</p>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                            <img src="/img/casa1.jpg" class="d-block w-100" alt="img1">
-                                <div class="row me-0 ms-3">
-                                    <div class="col-md-12 mt-3"> 
-                                        <h1 class="">450.000€</h1>
-                                        <div class="container-text">
-                                            <p class="">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-                                            </p>
-                                        </div>
-                                        <h1 class="">Característiques</h1>
-                                        <div class="row col-md-12">
-                                            <div class="col-md-3">
-                                                <i class="fa-solid fa-person-swimming" style="color: #000000;"></i>
-                                                <p class="">Piscina</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <i class="fa-solid fa-wifi" style="color: #000000;"></i>
-                                                <p class="">Wi-Fi</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <i class="fa-solid fa-square-parking" style="color: #000000;"></i>
-                                                <p class="">Parking</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <i class="fa-solid fa-temperature-quarter" style="color: #000000;"></i>
-                                                <p class="">Calefacció</p>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="row mt-3">
-                                            <div class="col-md-12">
-                                                <div id="map" class="z-depth-1-half map-container mb-3">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <div class="sticky-top" style="z-index: 1;">
-                                            <form action="https://www.fotocasa.es/es/" method="POST">
-                                                <div class="row gx-5 gy-4 text-center justify-content-center m-3">
-                                                    <h4 class="">Reservar Apartament</h4>
-                                                    <div class="col-md-8 shadow-lg input-col">
-                                                        <label for="from">Data Inici</label>
-                                                        <input type="text" id="from" name="from" class="form-control mb-3 from">
-                                                        <label for="to">Data Final</label>
-                                                        <input type="text" id="to" name="to" class="form-control mb-3 to">
-                                                    </div>
-                                                    <div class="col-md-8 shadow-lg input-col">
-                                                        <label for="rsv-email">Correu Electronic</label>
-                                                        <input type="email" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email">
-                                                    </div>
-                                                    <div class="col-md-8 shadow-lg input-col">
-                                                        <label for="rsv-telef" class>Telefon</label>
-                                                        <input type="text" class="form-control-plaintext" name="rsv-telef" id="rsv-telef" placeholder="Telefon"> 
-                                                    </div>
-                                                    <div class="col-md-8 shadow-lg input-col">
-                                                        <label for="rsv-pers">Persones</label>
-                                                        <input type="text" class="form-control-plaintext" name="rsv-pers" id="rsv-pers" placeholder="Persones"> 
-                                                    </div>
-                                                    <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
-                                                </div>
-                                            </form>   
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                            </div>
-                                            
+                            <div class="modal-header"></div>
+                            <div class="modal-body"></div>
+                            <div class="modal-footer"></div>
                         </div>
                     </div>
                 </div>
-                
+
                 <?php foreach($apts as $i => $apt) { ?>
                     <a id="<?=$apt["idApartament"]?>"class="text-decoration-none Apt-Model-Show" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div class="card m-5" style="max-width: 800px;">
@@ -149,7 +75,13 @@
                         </div>
                     </a>
                 <?php } ?>
-
+                <h2 class="text-white">Localització</h2>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <div id="map" class="z-depth-1-half map-container mb-3">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4 text-white mt-5 mb-5 text-center d-sm-none d-md-block">
                 <div class="sticky-top" style="z-index: 1;">

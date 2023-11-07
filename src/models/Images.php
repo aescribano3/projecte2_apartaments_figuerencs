@@ -19,6 +19,18 @@ class Imatge {
 
         return $imgApartament;
     }
+
+    public function getImgData($id) {
+        $stm = $this->sql->prepare("SELECT * FROM imgapartament WHERE idApartament=:id;");
+        $stm->execute([':id' => $id]);
+        $results = $stm->fetchAll(\PDO::FETCH_ASSOC);
+    
+        if ($results) {
+            return $results;
+        } else {
+            return [];
+        }
+    }
     
     
     public function upload($aptId, $imgPath) {
