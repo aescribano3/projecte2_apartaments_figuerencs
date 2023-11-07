@@ -23,11 +23,12 @@ class Temporada {
     public function getTempData($id) {
         $stm = $this->sql->prepare("select * from temporada where idApartament=:id;");
         $stm->execute([':id' => $id]);
-        $result = $stm->fetch(\PDO::FETCH_ASSOC);
-        if($result){
-            return $result;
+        $results = $stm->fetchAll(\PDO::FETCH_ASSOC);
+    
+        if ($results) {
+            return $results;
         } else {
-            return false;
+            return [];
         }
     }
 
