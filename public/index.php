@@ -17,6 +17,7 @@ include "../src/controllers/ctrlDoRegister.php";
 include "../src/controllers/ctrlDoUpdate.php";
 include "../src/controllers/ctrlDoUpload.php";
 include "../src/controllers/GetAptDataController.php";
+include "../src/controllers/ctrlDoReserva.php";
 
 include "../src/middleware/isLogged.php";
 
@@ -54,6 +55,8 @@ if ($r == "login") {
     ctrlDoLogout($request, $response, $container);
 } elseif ($r == "doregister") {
     ctrlDoRegister($request, $response, $container);
+} elseif ($r == "doreserva") {
+    ctrlDoReserva($request, $response, $container);
 } elseif ($r == "doupdate") {
     $response = isLogged($request, $response, $container,"ctrlDoUpdate");
 } elseif ($r == "doupload") {
