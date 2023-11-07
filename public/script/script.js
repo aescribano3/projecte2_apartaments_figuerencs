@@ -28,9 +28,13 @@ $('#enlace-usuarios').on('click', function () {
 });
 
 var mymap = L.map('map').setView([41.3851, 2.1734], 17);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: 
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution:
 '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(mymap);
 let marker = L.marker([41.3851, 2.1734]).addTo(mymap);
+
+/*var modmap = L.map('map-mod').setView([95.3851, 45.1734], 17);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: 
+'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(modmap);*/
 
 $(".Apt-Model-Show").on("click", function (event) {
   var AptId = $(this).attr('id');

@@ -71,7 +71,7 @@
                     
                     <div class="row mt-3">
                         <div class="col-md-12">
-                            <div id="map" class="z-depth-1-half map-container mb-3">
+                            <div id="map-mod" class="z-depth-1-half map-container mb-3">
                             </div>
                         </div>
                     </div>
@@ -83,10 +83,10 @@
                             <div class="row gx-5 gy-4 text-center justify-content-center m-3">
                                 <h4 class="">Reservar Apartament</h4>
                                 <div class="col-md-8 shadow-lg input-col">
-                                    <label for="from">Data Inici</label>
-                                    <input type="text" id="from" name="from" class="form-control mb-3 from">
-                                    <label for="to">Data Final</label>
-                                    <input type="text" id="to" name="to" class="form-control mb-3 to">
+                                    <label for="from-mod">Data Inici</label>
+                                    <input type="text" id="from-mod" name="from" class="form-control mb-3 from">
+                                    <label for="to-mod">Data Final</label>
+                                    <input type="text" id="to-mod" name="to" class="form-control mb-3 to">
                                 </div>
                                 <div class="col-md-8 shadow-lg input-col">
                                     <label for="rsv-email">Correu Electronic</label>
