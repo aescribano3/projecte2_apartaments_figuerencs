@@ -3,7 +3,6 @@
 function ctrlUser($request, $response, $container){
     
     $userModel = $container->users();
-
     $userData = $userModel->getUserData($_SESSION["user"]["id"]);
 
     $nom = $userData["nom"];
@@ -13,8 +12,6 @@ function ctrlUser($request, $response, $container){
     $pass = $userData["pass"];
     $cv = $userData["cv"];
     $rol = $userData["rol"];
-    
-    $response->setTemplate("user.php");
 
     $response->set("name", $nom);
     $response->set("lastname", $cognom);
@@ -24,11 +21,11 @@ function ctrlUser($request, $response, $container){
     $response->set("cv", $cv);
     $response->set("rol", $rol);
 
-    $userModel = $container->users();
-
     $users = $userModel->getAll();
 
     $response->set("users", $users);
+        
+    $response->setTemplate("user.php");
 
     return $response;
 }
