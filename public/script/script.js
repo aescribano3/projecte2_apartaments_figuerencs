@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
 $('#contenido-dades').show();
 
 $('#enlace-dades').on('click', function () {
@@ -13,18 +12,24 @@ $('#enlace-historial').on('click', function () {
   $('#contenido-historial').show();
   $('#contenido-reserves').hide();
   $('#contenido-usuarios').hide();
+
+  $("#historialReserves").DataTable();
 });
 $('#enlace-reserves').on('click', function () {
   $('#contenido-dades').hide();
   $('#contenido-historial').hide();
   $('#contenido-reserves').show();
   $('#contenido-usuarios').hide();
+
+  $("#reserves").DataTable();
 });
 $('#enlace-usuarios').on('click', function () {
   $('#contenido-dades').hide();
   $('#contenido-historial').hide();
   $('#contenido-reserves').hide();
   $('#contenido-usuarios').show();
+
+  $("#usuaris").DataTable();
 });
 
 var mymap = L.map('map').setView([41.3851, 2.1734], 17);
@@ -54,7 +59,7 @@ $(".Apt-Model-Show").on("click", function (event) {
 
 });
 
-//Rango fecha index
+//Rango fecha General
 $(function() {
   var dateFormat = "dd/mm/yy"; // Cambia el formato de fecha a "dd/mm/yy" para que coincida con tus campos
 

@@ -9,7 +9,7 @@
             <img src="/img/<?=$imageUrls[0]?>" class="d-block w-100" alt="imatge_portada">
             <div class="row me-0 ms-3">
                 <div class="col-md-12 mt-3">
-                    <h1 class="">
+                    <h3 class="">
                         <?php
                             if ($temp == true){
                                 echo 'Preu Temporada Baixa: '. $preuTB .'€/dia';
@@ -17,7 +17,7 @@
                                 echo 'Preu Temporada Alta: '. $preuTA .'€/dia';
                             }
                         ?>
-                    </h1>
+                    </h3>
                     <div class="container-text">
                         <p class="">
                             <?=$descripcio?>
@@ -28,7 +28,7 @@
                             <?=$adreca?>
                         </p>
                     </div>
-                    <h1 class="">Característiques</h1>
+                    <h3 class="">Característiques</h3>
                     <div class="row col-md-12">
                         <div class="col-md-3">
                             <p class="">Metres Quadrats: <?=$metresCuadrats?> </p>
@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="col-md-12">
-                    <div class="sticky-top" style="z-index: 1;">
+                    <div class="sticky-top">
                         <form action="/index?r=doreserva" method="POST">
                             <div class="row gx-5 gy-4 text-center justify-content-center m-3">
                                 <h4 class="">Reservar Apartament</h4>
