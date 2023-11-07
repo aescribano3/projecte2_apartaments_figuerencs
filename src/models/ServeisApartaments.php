@@ -18,7 +18,20 @@ class ServeisApartaments {
         }
 
         return $serveis;
-}
+    }
+
+    public function getSerData($id) {
+        $stm = $this->sql->prepare("SELECT idServei FROM serveisapartaments WHERE idApartament = :id;");
+        $stm->execute([':id' => $id]);
+        $results = $stm->fetchAll(\PDO::FETCH_ASSOC);
+    
+        if ($results) {
+            return $results;
+        } else {
+            return [];
+        }
+    }
+    
 
     public function upload($apt_pics, $apt_wifi, $apt_park, $apt_cale, $aptId){
         if($apt_pics != NULL){

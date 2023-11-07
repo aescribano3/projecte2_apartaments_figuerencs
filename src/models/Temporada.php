@@ -20,6 +20,17 @@ class Temporada {
         return $temporada;
     }
 
+    public function getTempData($id) {
+        $stm = $this->sql->prepare("select * from temporada where idApartament=:id;");
+        $stm->execute([':id' => $id]);
+        $result = $stm->fetch(\PDO::FETCH_ASSOC);
+        if($result){
+            return $result;
+        } else {
+            return false;
+        }
+    }
+
     public function upload($data_ini_alta, $data_fin_alta, $data_ini_baixa, $data_fin_baixa, $aptId) {
         $stm = $this->sql->prepare('INSERT INTO temporada ( idApartament, nom, dataInici, dataFinal) VALUES (:idApartament, :tipus, :datainici, :datafinal)');
         $stm->execute([
