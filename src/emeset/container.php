@@ -64,4 +64,8 @@ class Container
     {
         return new \Apartaments\Temporada($this->sql);
     }
+    public function reserva()
+    {
+        return new \Apartaments\Reserva($this->sql);
+    }
 }

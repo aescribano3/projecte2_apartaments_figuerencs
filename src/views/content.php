@@ -59,7 +59,7 @@
     <!-- Form -->
     <div class="col-md-4">
         <div class="sticky-top" style="z-index: 1;">
-            <form action="https://www.fotocasa.es/es/" method="POST">
+            <form action="index.php?r=doreserva" method="POST">
                 <div class="row gx-5 gy-4 text-center justify-content-center m-3">
                     <h4 class="text-light">Reservar Apartament</h4>
                     <div class="col-md-8 shadow-lg input-col">
@@ -74,12 +74,15 @@
                         <label for="rsv-pers">Persones</label>
                         <input type="text" class="form-control-plaintext" name="rsv-pers" id="rsv-pers" placeholder="Persones"> 
                     </div>
-                    <div class="col-md-8 text-light">
-                            <label for="from">Data Inici</label>
-                            <input type="text" id="from" name="from" class="form-control mb-3 from">
-                            <label for="to">Data Final</label>
-                            <input type="text" id="to" name="to" class="form-control mb-3 to">
-                    </div>
+                <div class="col-md-5 shadow-lg border border-dark bg-light border-2 rounded-3">
+                    <label for="data-inici">Data inici</label>
+                    <input type="text" id="data-inici" name="data-inir" class="form-control from" placeholder="Data Inici Temporada Alta" required>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5 shadow-lg border border-dark bg-light border-2 rounded-3">
+                    <label for="data-final">Data final</label>
+                    <input type="text" id="data-final" name="data-finr" class="form-control to" placeholder="Data Final Temporada Alta"  required>
+                </div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
                 </div>
             </form>   

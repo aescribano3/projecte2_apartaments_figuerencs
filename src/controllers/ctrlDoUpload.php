@@ -14,6 +14,9 @@ function ctrlDoUpload($request, $response, $container){
     $apt_desc = $request->get(INPUT_POST, "apt-desc");
     $apt_diamaxcancel = $request->get(INPUT_POST, "apt-diamaxcancel");
     $idUsuari = $_SESSION["user"]["id"];
+    
+
+
 
     $apt_pisc = $request->get(INPUT_POST, "apt-pisc");
     $apt_wifi = $request->get(INPUT_POST, "apt-wifi");
@@ -24,13 +27,15 @@ function ctrlDoUpload($request, $response, $container){
     $data_fin_alta = $request->get(INPUT_POST, "data-fin-alta");
     $data_ini_baixa = $request->get(INPUT_POST, "data-ini-baixa");
     $data_fin_baixa = $request->get(INPUT_POST, "data-fin-baixa");
-    
+
+   
 
     $aptModel = $container->apartaments();
 
     $aptId = $aptModel->upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_diamaxcancel, $idUsuari);
 
-
+    $_SESSION['aptId'] = $aptId; // Almacena el ID del departamento en una variable de sesión
+    
     $serModel = $container->serveisapartaments();
 
     $serModel = $serModel->upload($apt_pisc, $apt_wifi, $apt_park, $apt_cale, $aptId);
@@ -39,8 +44,8 @@ function ctrlDoUpload($request, $response, $container){
     $imgModel = $container->imatge();
 
         // Obtener las imágenes subidas
-        if (isset($_FILES['apt-img'])) {
-            $imgFiles = $_FILES['apt-img'];
+        if (isset($_FILES['apt-imgs'])) {
+            $imgFiles = $_FILES['apt-imgs'];
 
             // Ruta donde se almacenarán las imágenes subidas (ajusta la ruta a tu configuración)
             $uploadDirectory = '../public/img/';
@@ -53,6 +58,7 @@ function ctrlDoUpload($request, $response, $container){
 
                 // Mover la imagen al directorio de destino
                 if (move_uploaded_file($imgFiles['tmp_name'][$key], $imgPath)) {
+        
                     // Obtener el nombre del archivo sin la ruta
                     $imageFileName = pathinfo($imageName, PATHINFO_BASENAME);
 
