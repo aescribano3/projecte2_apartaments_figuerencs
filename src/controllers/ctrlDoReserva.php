@@ -2,8 +2,10 @@
 
     function ctrlDoReserva($request, $response, $container){
 
-        $aptId = $_SESSION['aptId']; // Recupera el ID del departamento desde la variable de sesión
+        $aptId = $_SESSION['aptId'];
         $idUsuari = $_SESSION["user"]["id"];
+
+        die(var_dump($aptId));
         
         $apt_pta = $request->get(INPUT_POST, "apt-pta");
         $apt_ptb = $request->get(INPUT_POST, "apt-ptb");
