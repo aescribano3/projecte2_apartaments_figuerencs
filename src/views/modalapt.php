@@ -92,10 +92,6 @@
                                     <label for="rsv-email">Correu Electronic</label>
                                     <input type="email" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email">
                                 </div>
-                                <div class="col-md-8 shadow-lg input-col">
-                                    <label for="rsv-pers">Persones</label>
-                                    <input type="text" class="form-control-plaintext" name="rsv-pers" id="rsv-pers" placeholder="Persones"> 
-                                </div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
                             </div>
                         </form>   

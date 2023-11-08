@@ -20,14 +20,16 @@ class Reserva {
         return $reserva;
     }
 
-    public function reser($idUsuari, $aptId, $iniciReserva, $fiReserva, $diasRestantes){
-        $stm = $this->sql->prepare('INSERT INTO reserva ( idApartament, idUsuari, DataMaximCancel, diaEntrada, diaSortida) VALUES (:idApartament, :idUsuari, :DataMaximCancel, :diaEntrada, :diaSortida)');
+    public function reser($idUsuari, $aptId, $dataCancel, $preu, $FormatIniciReserva, $FormatFiReserva, $Estat){
+        $stm = $this->sql->prepare('INSERT INTO reserva ( idApartament, idUsuari, DataMaximCancel, preu, diaEntrada, diaSortida, estat) VALUES (:idApartament, :idUsuari,:DataMaximCancel, :preu, :diaEntrada, :diaSortida, :estat)');
         $stm->execute([
             ':idApartament' => $aptId,
             ':idUsuari' => $idUsuari,
-            ':diaEntrada' => $iniciReserva,
-            ':diaSortida' => $fiReserva,
-            ':DataMaximCancel' => $diasRestantes,
+            ':DataMaximCancel' => $dataCancel,
+            ':preu' => $preu,
+            ':diaEntrada' => $FormatIniciReserva,
+            ':diaSortida' => $FormatFiReserva,
+            ':estat' => $Estat,
         ]);
     }
 }
