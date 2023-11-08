@@ -5,6 +5,8 @@ function AptData($request, $response, $container, $AptId) {
     $aptModel = $container->apartaments();
     $apts = $aptModel->getAptData($AptId);
 
+    $response->setSession("AptIdMod", $AptId);
+
     $idApartament = $apts["idApartament"];
     $diaMaximCancel = $apts["diaMaximCancel"];
     $latitud = $apts["latitud"];
