@@ -11,9 +11,9 @@
                 <div class="col-md-12 mt-3">
                     <h3 class="">
                         <?php
-                            if ($temp == true){
+                            if ($temp == "Baixa"){
                                 echo 'Preu Temporada Baixa: '. $preuTB .'€/dia';
-                            } else {
+                            } else if ($temp == "Alta"){
                                 echo 'Preu Temporada Alta: '. $preuTA .'€/dia';
                             }
                         ?>

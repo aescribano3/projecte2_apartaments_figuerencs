@@ -61,7 +61,7 @@ $(".Apt-Model-Show").on("click", function (event) {
 
 //Rango fecha General
 $(function() {
-  var dateFormat = "dd/mm/yy"; // Cambia el formato de fecha a "dd/mm/yy" para que coincida con tus campos
+  var dateFormat = "dd/mm/yy";
 
   var from = $(".from").datepicker({
     defaultDate: "+1w",
