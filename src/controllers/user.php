@@ -5,6 +5,11 @@ function ctrlUser($request, $response, $container){
     $userModel = $container->users();
     $userData = $userModel->getUserData($_SESSION["user"]["id"]);
 
+    $resModel = $container->reserva();
+
+    $resData = $resModel->getResData($_SESSION["user"]["id"]);
+    $resObert = $resModel->getResDataObert($_SESSION["user"]["id"]);
+
     $nom = $userData["nom"];
     $cognom = $userData["cognom"];
     $telefon = $userData["telefon"];
@@ -21,8 +26,10 @@ function ctrlUser($request, $response, $container){
     $response->set("cv", $cv);
     $response->set("rol", $rol);
 
-    $users = $userModel->getAll();
+    $response->set("resData", $resData);
+    $response->set("resObert", $resObert);
 
+    $users = $userModel->getAll();
     $response->set("users", $users);
         
     $response->setTemplate("user.php");

@@ -20,6 +20,30 @@ class Reserva {
         return $reserva;
     }
 
+    public function getResData($id) {
+        $stm = $this->sql->prepare("SELECT * FROM reserva WHERE idUsuari=:id;");
+        $stm->execute([':id' => $id]);
+        $results = $stm->fetchAll(\PDO::FETCH_ASSOC);
+    
+        if ($results) {
+            return $results;
+        } else {
+            return [];
+        }
+    }
+
+    public function getResDataObert($id) {
+        $stm = $this->sql->prepare("SELECT * FROM reserva WHERE idUsuari=:id and estat = 'Obert';");
+        $stm->execute([':id' => $id]);
+        $results = $stm->fetchAll(\PDO::FETCH_ASSOC);
+    
+        if ($results) {
+            return $results;
+        } else {
+            return [];
+        }
+    }
+
     public function reser($idUsuari, $aptId, $dataCancel, $preu, $FormatIniciReserva, $FormatFiReserva, $Estat){
         $stm = $this->sql->prepare('INSERT INTO reserva ( idApartament, idUsuari, DataMaximCancel, preu, diaEntrada, diaSortida, estat) VALUES (:idApartament, :idUsuari,:DataMaximCancel, :preu, :diaEntrada, :diaSortida, :estat)');
         $stm->execute([
