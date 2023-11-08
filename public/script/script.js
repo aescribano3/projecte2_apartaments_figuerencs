@@ -32,10 +32,12 @@ $('#enlace-usuarios').on('click', function () {
   $("#usuaris").DataTable();
 });
 
-var mymap = L.map('map').setView([42.273611990936516, 2.9647091451457754], 16);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution:
-'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(mymap);
-let marker = L.marker([42.273611990936516, 2.9647091451457754]).addTo(mymap);
+  var mymap = L.map('map').setView([42.273611990936516, 2.9647091451457754], 16);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(mymap);
+  let marker = L.marker([42.273611990936516, 2.9647091451457754]).addTo(mymap);
 
 $(".Apt-Model-Show").on("click", function (event) {
   var AptId = $(this).attr('id');
@@ -54,6 +56,11 @@ $(".Apt-Model-Show").on("click", function (event) {
       error: function (error) {
           console.log(error);
       }
+  });
+
+  $("#CancelResv").on("click", function (event) {
+    var IdReserva = $("#IdReserva").text();
+
   });
 });
 

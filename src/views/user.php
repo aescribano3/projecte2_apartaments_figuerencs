@@ -73,49 +73,27 @@
     <table class="table table-striped table-hover" id="historialReserves">
       <thead>
         <tr class="table-dark">
-          <th scope="col">#</th>
+          <th scope="col">Id reserva</th>
+          <th scope="col">Apartament</th>
           <th scope="col">Dia entrada</th>
-          <th scope="col">Dia Sortida</th>
+          <th scope="col">Dia sortida</th>
           <th scope="col">Preu</th>
-          <th scope="col">Estado</th>
+          <th scope="col">Data maxima de cancelació</th>
+          <th scope="col">Estat</th>
         </tr>
       </thead>
       <tbody>
+      <?php foreach($resData as $i => $reser) { ?>
         <tr class="table-dark">
-          <th scope="row">1</th>
-          <td>10/05/2023</td>
-          <td>15/05/2023</td>
-          <td>100€</td>
-          <td>Tencada</td>
+          <th scope="row"><?=$reser["idReserva"]?></th>
+          <td><?=$reser["idApartament"]?></td>
+          <td><?=$reser["diaEntrada"]?></td>
+          <td><?=$reser["diaSortida"]?></td>
+          <td><?=$reser["preu"]?></td>
+          <td><?=$reser["DataMaximCancel"]?></td>
+          <td><?=$reser["estat"]?></td>
         </tr>
-        <tr class="table-dark">
-          <th scope="row">2</th>
-          <td>10/05/2023</td>
-          <td>15/05/2023</td>
-          <td>100€</td>
-          <td>Tencada</td>
-        </tr>
-        <tr class="table-dark">
-          <th scope="row">3</th>
-          <td>15/05/2023</td>
-          <td>15/05/2023</td>
-          <td>100€</td>
-          <td>Oberta</td>
-        </tr>
-        <tr class="table-dark">
-          <th scope="row">4</th>
-          <td>15/05/2023</td>
-          <td>15/05/2023</td>
-          <td>100€</td>
-          <td>Oberta</td>
-        </tr>
-        <tr class="table-dark">
-          <th scope="row">5</th>
-          <td>15/05/2023</td>
-          <td>15/05/2023</td>
-          <td>100€</td>
-          <td>Oberta</td>
-        </tr>
+      <?php } ?>
       </tbody>
     </table>
   </div>
@@ -126,35 +104,27 @@
     <table class="table table-striped table-hover" id="reserves">
       <thead>
         <tr class="table-dark">
-          <th scope="col">#</th>
+          <th scope="col">Id reserva</th>
+          <th scope="col">Apartament</th>
           <th scope="col">Dia entrada</th>
-          <th scope="col">Dia Sortida</th>
+          <th scope="col">Dia sortida</th>
           <th scope="col">Preu</th>
+          <th scope="col">Data maxima de cancelació</th>
           <th scope="col">Cancelar Reserva</th>
         </tr>
       </thead>
       <tbody>
+      <?php foreach($resObert as $i => $rese) { ?>
         <tr class="table-dark">
-          <th scope="row">3</th>
-          <td>10/05/2023</td>
-          <td>15/05/2023</td>
-          <td>100€</td>
-          <td><button class="btn btn-danger">Cancelar</button></td>
+          <th id="IdReserva" scope="row"><?=$rese["idReserva"]?></th>
+            <td><?=$rese["idApartament"]?></td>
+            <td><?=$rese["diaEntrada"]?></td>
+            <td><?=$rese["diaSortida"]?></td>
+            <td><?=$rese["preu"]?></td>
+            <td><?=$rese["DataMaximCancel"]?></td>
+            <td><button id="CancelResv" class="btn btn-danger">Cancelar</button></td>
         </tr>
-        <tr class="table-dark">
-          <th scope="row">4</th>
-          <td>10/05/2023</td>
-          <td>15/05/2023</td>
-          <td>100€</td>
-          <td><button class="btn btn-danger">Cancelar</button></td>
-        </tr>
-        <tr class="table-dark">
-          <th scope="row">5</th>
-          <td>15/05/2023</td>
-          <td>15/05/2023</td>
-          <td>100€</td>
-          <td><button class="btn btn-danger">Cancelar</button></td>
-        </tr>
+      <?php } ?>
       </tbody>
     </table>
 </div>
