@@ -75,6 +75,9 @@ function AptData($request, $response, $container, $AptId) {
 
     $currentDate = date("Y-m-d");
 
+    //True = Temporada Baixa
+    //False = Temporada Alta
+
     foreach ($temps as $tempr) {
         $fechaInicio = $tempr["dataInici"];
         $fechaFin = $tempr["dataFinal"];
