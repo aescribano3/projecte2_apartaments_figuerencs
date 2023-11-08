@@ -95,21 +95,21 @@
                 </div>
                 <div class="col-md-5 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="data-inici-alta">Data Inici Temporada Alta</label>
-                    <input type="text" id="data-inici-alta" name="data-ini-alta" class="form-control from" placeholder="Data Inici Temporada Alta" value="01/07/2023" required>
+                    <input type="text" id="data-inici-alta" name="data-ini-alta" class="form-control from" placeholder="Data Inici Temporada Alta" value="01/07/<?=$currentYear?>" required>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-5 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="data-final-alta">Data Final Temporada Alta</label>
-                    <input type="text" id="data-final-alta" name="data-fin-alta" class="form-control to" placeholder="Data Final Temporada Alta" value="31/12/2023" required>
+                    <input type="text" id="data-final-alta" name="data-fin-alta" class="form-control to" placeholder="Data Final Temporada Alta" value="31/12/<?=$currentYear?>" required>
                 </div>
                 <div class="col-md-5 shadow-lg border border-dark bg-light border-2 rounded-3"> 
                     <label for="data-inici-baixa">Data Inici Temporada Baixa</label>
-                    <input type="text" id="data-inici-baixa" name="data-ini-baixa" class="form-control from" placeholder="Data Inici Temporada Baixa" value="01/01/2023" required>
+                    <input type="text" id="data-inici-baixa" name="data-ini-baixa" class="form-control from" placeholder="Data Inici Temporada Baixa" value="01/01/<?=$currentYear?>" required>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-5 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="data-final-baixa">Data Final Temporada Baixa</label>
-                    <input type="text" id="data-final-baixa" name="data-fin-baixa" class="form-control to" placeholder="Data Final Temporada Baixa" value="30/06/2023" required>
+                    <input type="text" id="data-final-baixa" name="data-fin-baixa" class="form-control to" placeholder="Data Final Temporada Baixa" value="30/06/<?=$currentYear?>" required>
                 </div>
                  <div class="col-md-4 shadow-lg border border-dark bg-light border-2 rounded-3">
                     <label for="apt-diamaxcancel">Dies maximas abans de cancelar</label>
