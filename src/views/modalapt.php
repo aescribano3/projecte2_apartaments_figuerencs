@@ -84,13 +84,13 @@
                                 <h4 class="">Reservar Apartament</h4>
                                 <div class="col-md-8 shadow-lg input-col">
                                     <label for="from-mod">Data Inici</label>
-                                    <input type="text" id="from-mod" name="from" class="form-control mb-3 from">
+                                    <input type="text" id="from-mod" name="from" class="form-control mb-3 from" required>
                                     <label for="to-mod">Data Final</label>
-                                    <input type="text" id="to-mod" name="to" class="form-control mb-3 to">
+                                    <input type="text" id="to-mod" name="to" class="form-control mb-3 to" required>
                                 </div>
                                 <div class="col-md-8 shadow-lg input-col">
                                     <label for="rsv-email">Correu Electronic</label>
-                                    <input type="email" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email">
+                                    <input type="email" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
                             </div>
