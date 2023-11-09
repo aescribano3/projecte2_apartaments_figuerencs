@@ -79,7 +79,7 @@
 
                 <div class="col-md-12">
                     <div class="sticky-top">
-                        <form action="/index?r=doreserva" method="POST">
+                        <form action="/index.php?r=doreserva" method="POST">
                             <div class="row gx-5 gy-4 text-center justify-content-center m-3">
                                 <h4 class="">Reservar Apartament</h4>
                                 <div class="col-md-8 shadow-lg input-col">
