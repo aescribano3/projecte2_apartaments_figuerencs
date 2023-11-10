@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //A la pagina de l'usuari canvia el contingut segons el boto que cliquis
 $('#contenido-dades').show();
 
 $('#enlace-dades').on('click', function () {
@@ -31,7 +32,7 @@ $('#enlace-usuarios').on('click', function () {
 
   $("#usuaris").DataTable();
 });
-
+//Mapa per a la pàgina principal
   var mymap = L.map('map').setView([42.273611990936516, 2.9647091451457754], 16);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -39,6 +40,7 @@ $('#enlace-usuarios').on('click', function () {
   }).addTo(mymap);
   let marker = L.marker([42.273611990936516, 2.9647091451457754]).addTo(mymap);
 
+  //Ajax per el modal dels apartaments
 $(".Apt-Model-Show").on("click", function (event) {
   var AptId = $(this).attr('id');
   $.ajax({
@@ -58,6 +60,7 @@ $(".Apt-Model-Show").on("click", function (event) {
       }
   });
 
+  //Funcio no funcional per cancelar reserves
   $("#CancelResv").on("click", function (event) {
     var IdReserva = $("#IdReserva").text();
 
@@ -68,7 +71,7 @@ $(".Apt-Model-Show").on("click", function (event) {
 
 });
 
-//Rango fecha General
+//Creació de dates
 $(function() {
   var dateFormat = "dd/mm/yy";
 

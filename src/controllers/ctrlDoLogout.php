@@ -2,6 +2,7 @@
 
 function ctrlDoLogout($request, $response, $container){
 
+    //Borra les dades de la sessió
     $response->setSession("user", []);
     $response->setSession("rol", []);
     $response->setSession("logged", false);

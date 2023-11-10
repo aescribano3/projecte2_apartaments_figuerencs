@@ -20,6 +20,7 @@ class Users {
         return $users;
     }
 
+    //Obtenir les dades d'un usuari
     public function getUserData($id){
         $stm = $this->sql->prepare("select * from usuari where id=:id;");
         $stm -> execute([':id' => $id]);
@@ -31,6 +32,7 @@ class Users {
         }
     }
 
+    //Comprovar login d'un usuari
     public function login($email, $pass){
         $stm = $this->sql->prepare('select id, email, rol ,pass from usuari where email=:email;');
         $stm->execute([':email' => $email]);
@@ -43,6 +45,7 @@ class Users {
         }
     }
 
+    //Registrar un usuari
     public function register($name, $lastname, $number, $email, $pass, $confpass, $cv, $rol){
 
         if ($pass !== $confpass) {
@@ -64,6 +67,7 @@ class Users {
         return $this->sql->lastInsertId();
     }
 
+    //Modificar les dades d'un usuari
     public function update($id, $name, $lastname, $number, $email, $pass, $cv){
 
         $stm = $this->sql->prepare('UPDATE usuari SET nom=:nom, cognom=:cognom, telefon=:telefon, email=:email, pass=:pass, cv=:cv WHERE id=:id');

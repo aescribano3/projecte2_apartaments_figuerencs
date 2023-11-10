@@ -2,6 +2,7 @@
 
 function ctrlDoUpdate($request, $response, $container){
     
+    //Guardem les dades del formulari
     $id = $_SESSION["user"]["id"];
     $name = $request->get(INPUT_POST, "user-name-update");
     $lastname = $request->get(INPUT_POST, "user-lastname-update");
@@ -12,6 +13,7 @@ function ctrlDoUpdate($request, $response, $container){
 
     $userModel = $container->users();
     
+    //Cridem a la funció per actualitzar l'usuari
     $userModel = $userModel->update($id, $name, $lastname, $number, $email, $pass, $cv);
 
     if($userModel) {

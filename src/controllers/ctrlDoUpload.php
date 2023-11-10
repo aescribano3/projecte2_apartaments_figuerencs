@@ -2,6 +2,7 @@
 
 function ctrlDoUpload($request, $response, $container){
 
+    //Guardem les dades del formulari en variables
     $apt_name = $request->get(INPUT_POST, "apt-name");
     $apt_adreca = $request->get(INPUT_POST, "apt-adr");
     $apt_cp = $request->get(INPUT_POST, "apt-cp");
@@ -14,9 +15,6 @@ function ctrlDoUpload($request, $response, $container){
     $apt_desc = $request->get(INPUT_POST, "apt-desc");
     $apt_diamaxcancel = $request->get(INPUT_POST, "apt-diamaxcancel");
     $idUsuari = $_SESSION["user"]["id"];
-    
-
-
 
     $apt_pisc = $request->get(INPUT_POST, "apt-pisc");
     $apt_wifi = $request->get(INPUT_POST, "apt-wifi");
@@ -28,19 +26,17 @@ function ctrlDoUpload($request, $response, $container){
     $data_ini_baixa = $request->get(INPUT_POST, "data-ini-baixa");
     $data_fin_baixa = $request->get(INPUT_POST, "data-fin-baixa");
 
-   
-
+    //Cridem a la funció per pujar l'apartament
     $aptModel = $container->apartaments();
-
     $aptId = $aptModel->upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_diamaxcancel, $idUsuari);
 
     $_SESSION['aptId'] = $aptId; // Almacena el ID del departamento en una variable de sesión
     
+    //Cridem a la funció per pujar els serveis de l'apartament
     $serModel = $container->serveisapartaments();
-
     $serModel = $serModel->upload($apt_pisc, $apt_wifi, $apt_park, $apt_cale, $aptId);
 
-    
+    //Cridem a la funció per pujar les imatges de l'apartament
     $imgModel = $container->imatge();
 
         // Obtener las imágenes subidas
@@ -70,20 +66,15 @@ function ctrlDoUpload($request, $response, $container){
                     }
                 }
 
-                $data_ini_alta = date('Y-m-d', strtotime(str_replace('/', '-', $data_ini_alta)));
-                $data_fin_alta = date('Y-m-d', strtotime(str_replace('/', '-', $data_fin_alta)));
-                $data_ini_baixa = date('Y-m-d', strtotime(str_replace('/', '-', $data_ini_baixa)));
-                $data_fin_baixa = date('Y-m-d', strtotime(str_replace('/', '-', $data_fin_baixa)));
+    //Cridem a la funció per pujar les temporades de l'apartament
+    $data_ini_alta = date('Y-m-d', strtotime(str_replace('/', '-', $data_ini_alta)));
+    $data_fin_alta = date('Y-m-d', strtotime(str_replace('/', '-', $data_fin_alta)));
+    $data_ini_baixa = date('Y-m-d', strtotime(str_replace('/', '-', $data_ini_baixa)));
+    $data_fin_baixa = date('Y-m-d', strtotime(str_replace('/', '-', $data_fin_baixa)));
 
     $tempModel = $container->temporada();
 
     $tempModel = $tempModel->upload($data_ini_alta, $data_fin_alta, $data_ini_baixa, $data_fin_baixa, $aptId);
-
-
-
-
-
-    
 
     if($aptModel) {
         $response->redirect("location: /index.php");

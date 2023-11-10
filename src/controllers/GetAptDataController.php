@@ -2,6 +2,7 @@
 
 function AptData($request, $response, $container, $AptId) {
 
+    //Guardem les dades de l'apartament seleccionat
     $aptModel = $container->apartaments();
     $apts = $aptModel->getAptData($AptId);
 
@@ -20,6 +21,7 @@ function AptData($request, $response, $container, $AptId) {
     $adreca = $apts["adreca"];
     $codiPostal = $apts["codiPostal"];
     
+    //Guardem les dades al response
     $response->set("idApartament", $idApartament);
     $response->set("diaMaximCancel", $diaMaximCancel);
     $response->set("latitud", $latitud);
@@ -33,6 +35,7 @@ function AptData($request, $response, $container, $AptId) {
     $response->set("adreca", $adreca);
     $response->set("codiPostal", $codiPostal);
 
+    //Guardem els serveis que te l'apartament
     $serModel = $container->serveisapartaments();
     $ser = $serModel->getSerData($AptId);
 
@@ -65,6 +68,7 @@ function AptData($request, $response, $container, $AptId) {
     $imgModel = $container->imatge();
     $img = $imgModel->getImgData($AptId);
 
+    //Guardem les imatges de l'apartament
     $imageUrls = array();
     foreach ($img as $image) {
         $imageUrls[] = $image["aptUrl"];
@@ -72,6 +76,7 @@ function AptData($request, $response, $container, $AptId) {
 
     $response->set("imageUrls", $imageUrls);
 
+    //Guardem les temporadas de l'apartament
     $tempModel = $container->temporada();
     $temps = $tempModel->getTempData($AptId);
 

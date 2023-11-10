@@ -20,6 +20,7 @@ class Apartment {
         return $apts;
     }
 
+    //Obtenir les dades d'un apartament
     public function getAptData($id) {
         $stm = $this->sql->prepare("select * from apartaments where idApartament=:id;");
         $stm->execute([':id' => $id]);
@@ -31,6 +32,7 @@ class Apartment {
         }
     }
 
+    //Pujar apartament a la bdd
     public function upload($apt_name, $apt_adreca, $apt_cp, $apt_habts, $apt_metr, $apt_lat, $apt_lon, $apt_pta, $apt_ptb, $apt_desc, $apt_diamaxcancel, $idUsuari){
 
         $stm = $this->sql->prepare('INSERT INTO apartaments (idUsuari,diaMaximCancel, latitud, longitud, habitacions, titol, descripcio, preuTA, preuTB, metresCuadrats, adreca, codiPostal) VALUES (:usuari,:diacancel, :latitud, :longitud, :habts, :nom, :descripcion, :preuta, :preutb, :metr, :adreca, :codipostal)');

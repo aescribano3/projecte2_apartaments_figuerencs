@@ -88,10 +88,6 @@
                                     <label for="to-mod">Data Final</label>
                                     <input type="text" id="to-mod" name="to" class="form-control mb-3 to" required>
                                 </div>
-                                <div class="col-md-8 shadow-lg input-col">
-                                    <label for="rsv-email">Correu Electronic</label>
-                                    <input type="email" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email" required>
-                                </div>
                                 <button id="reservarButton" type="button" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
                             </div>
                         </form>   

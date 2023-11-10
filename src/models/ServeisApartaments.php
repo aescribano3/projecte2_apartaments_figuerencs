@@ -20,6 +20,7 @@ class ServeisApartaments {
         return $serveis;
     }
 
+    //Obtenir els serveis d'un apartament
     public function getSerData($id) {
         $stm = $this->sql->prepare("SELECT idServei FROM serveisapartaments WHERE idApartament = :id;");
         $stm->execute([':id' => $id]);
@@ -32,7 +33,7 @@ class ServeisApartaments {
         }
     }
     
-
+    //Pujar serveis a la bdd
     public function upload($apt_pics, $apt_wifi, $apt_park, $apt_cale, $aptId){
         if($apt_pics != NULL){
             $stm = $this->sql->prepare('INSERT INTO serveisapartaments (idServei, idApartament) VALUES (:idServei, :idApartament)');

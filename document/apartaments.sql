@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-11-2023 a las 16:37:58
+-- Tiempo de generación: 10-11-2023 a las 17:44:06
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -43,6 +43,18 @@ CREATE TABLE `apartaments` (
   `codiPostal` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `apartaments`
+--
+
+INSERT INTO `apartaments` (`idApartament`, `idUsuari`, `diaMaximCancel`, `latitud`, `longitud`, `habitacions`, `titol`, `descripcio`, `preuTA`, `preuTB`, `metresCuadrats`, `adreca`, `codiPostal`) VALUES
+(1, 27, 3, 85.00000000, 79.00000000, 1, 'Apt 1', 'Apt 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus diam dui, lacinia quis egestas a, efficitur eu sapien. Quisque vestibulum augue eu semper imperdiet. Quisque tempus molestie dui vel efficitur. Donec est elit, blandit nec luctus et, tincidunt sed purus. Donec ullamcorper sodal', 350.00, 155.00, 25.00, 'Apt 1', 17600),
+(2, 27, 20, 85.00000000, 45.00000000, 6, 'gonorrea', 'Aassdnajdbasdnakjbdj abd asdj asdao shdjabsdjkbaskjdb askjhdkja shdkjhaskdhask', 45215.00, 645.00, 1.00, 'dsadasd', 12457),
+(3, 27, 6, 85.00000000, 45.00000000, 2, 'Monte Pinar', 'Monte pinar, donde los sueños se hacen realidad', 349.00, 149.00, 57.00, 'Ave del paraiso 35', 17600),
+(4, 27, 6, 85.00000000, 45.00000000, 2, 'Monte Pinar', 'Monte pinar, donde los sueños se hacen realidad', 349.00, 149.00, 57.00, 'Ave del paraiso 35', 17600),
+(5, 27, 3, 87.65790000, 15.33158000, 3, 'Piso Abuelas Locas', 'El edificio de las yayas locardas', 599.99, 299.99, 67.00, 'Callle sanjose Nº3', 17600),
+(6, 27, 3, 87.65790000, 15.33158000, 3, 'Abuelitas YoYO', 'El edificio de las yayas locardas', 599.99, 299.99, 67.00, 'Callle sanjose Nº3', 17600);
+
 -- --------------------------------------------------------
 
 --
@@ -68,6 +80,13 @@ CREATE TABLE `imgapartament` (
   `aptUrl` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `imgapartament`
+--
+
+INSERT INTO `imgapartament` (`idImatge`, `idApartament`, `aptUrl`) VALUES
+(1, 6, 'apartamento.PNG');
+
 -- --------------------------------------------------------
 
 --
@@ -84,6 +103,18 @@ CREATE TABLE `reserva` (
   `diaSortida` date NOT NULL,
   `estat` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `reserva`
+--
+
+INSERT INTO `reserva` (`idReserva`, `idApartament`, `idUsuari`, `DataMaximCancel`, `preu`, `diaEntrada`, `diaSortida`, `estat`) VALUES
+(1, 3, 27, '2023-03-27', 149.00, '2023-04-02', '2023-04-03', ''),
+(2, 3, 27, '2023-10-27', 2443.00, '2023-11-02', '2023-11-09', ''),
+(3, 4, 6, '2023-10-27', 2792.00, '2023-11-02', '2023-11-10', 'Obert'),
+(4, 6, 6, '2023-06-21', 1199.98, '2023-06-24', '2023-06-26', 'Tancat'),
+(5, 6, 30, '2023-03-30', 1199.98, '2023-04-02', '2023-04-04', 'Obert'),
+(6, 6, 27, '2023-03-30', 599.99, '2023-04-02', '2023-04-03', 'Obert');
 
 -- --------------------------------------------------------
 
@@ -117,6 +148,28 @@ CREATE TABLE `serveisapartaments` (
   `idApartament` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `serveisapartaments`
+--
+
+INSERT INTO `serveisapartaments` (`idServei`, `idApartament`) VALUES
+(1, 1),
+(3, 1),
+(1, 2),
+(3, 2),
+(2, 2),
+(4, 2),
+(1, 3),
+(2, 3),
+(4, 3),
+(1, 4),
+(2, 4),
+(4, 4),
+(3, 5),
+(4, 5),
+(3, 6),
+(4, 6);
+
 -- --------------------------------------------------------
 
 --
@@ -130,6 +183,20 @@ CREATE TABLE `temporada` (
   `dataInici` date NOT NULL,
   `dataFinal` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `temporada`
+--
+
+INSERT INTO `temporada` (`idTemporada`, `idApartament`, `nom`, `dataInici`, `dataFinal`) VALUES
+(1, 3, 'Temporada Alta', '2023-07-01', '2023-12-31'),
+(2, 3, 'Temporada Baixa', '2023-01-01', '2023-06-30'),
+(3, 4, 'Temporada Alta', '2023-07-01', '2023-12-31'),
+(4, 4, 'Temporada Baixa', '2023-01-01', '2023-06-30'),
+(5, 5, 'Temporada Alta', '2023-07-01', '2023-01-11'),
+(6, 5, 'Temporada Baixa', '2022-02-11', '1970-01-01'),
+(7, 6, 'Temporada Alta', '2023-07-01', '2023-01-11'),
+(8, 6, 'Temporada Baixa', '2022-02-11', '1970-01-01');
 
 -- --------------------------------------------------------
 
@@ -147,6 +214,16 @@ CREATE TABLE `usuari` (
   `cv` int(13) NOT NULL,
   `rol` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuari`
+--
+
+INSERT INTO `usuari` (`id`, `nom`, `cognom`, `email`, `telefon`, `pass`, `cv`, `rol`) VALUES
+(6, 'user', 'user', 'user@gmail.com', 999999998, '202cb962ac59075b964b07152d234b70', 55555487, 'Usuari'),
+(8, 'Gestor', 'Gestor', 'gestor@gmail.com', 654521546, '202cb962ac59075b964b07152d234b70', 545454541, 'Gestor'),
+(27, 'admin', 'admin', 'admin@gmail.com', 666666666, '202cb962ac59075b964b07152d234b70', 24587532, 'Administrador'),
+(30, 'Mamporreros', 'Josema', 'mj@gmail.com', 658458745, 'e10adc3949ba59abbe56e057f20f883e', 45762166, 'Usuari');
 
 --
 -- Índices para tablas volcadas
@@ -216,7 +293,7 @@ ALTER TABLE `usuari`
 -- AUTO_INCREMENT de la tabla `apartaments`
 --
 ALTER TABLE `apartaments`
-  MODIFY `idApartament` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idApartament` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `estat`
@@ -228,13 +305,13 @@ ALTER TABLE `estat`
 -- AUTO_INCREMENT de la tabla `imgapartament`
 --
 ALTER TABLE `imgapartament`
-  MODIFY `idImatge` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idImatge` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `idReserva` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idReserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `serveis`
@@ -246,13 +323,13 @@ ALTER TABLE `serveis`
 -- AUTO_INCREMENT de la tabla `temporada`
 --
 ALTER TABLE `temporada`
-  MODIFY `idTemporada` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTemporada` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `usuari`
 --
 ALTER TABLE `usuari`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Restricciones para tablas volcadas

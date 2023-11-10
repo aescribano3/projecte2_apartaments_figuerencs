@@ -10,6 +10,7 @@ function ctrlUser($request, $response, $container){
     $resData = $resModel->getResData($_SESSION["user"]["id"]);
     $resObert = $resModel->getResDataObert($_SESSION["user"]["id"]);
 
+    //Guarda les dades de l'usuari per a la seva edició
     $nom = $userData["nom"];
     $cognom = $userData["cognom"];
     $telefon = $userData["telefon"];
@@ -29,6 +30,7 @@ function ctrlUser($request, $response, $container){
     $response->set("resData", $resData);
     $response->set("resObert", $resObert);
 
+    //Guarda les dades de tots els usuaris per l'administrador
     $users = $userModel->getAll();
     $response->set("users", $users);
         

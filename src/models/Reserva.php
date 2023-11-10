@@ -20,6 +20,7 @@ class Reserva {
         return $reserva;
     }
     
+    //Obtenir una reserva especifica
     public function getreserva($id){
         $stm = $this->sql->prepare('select * from reserva where idReserva=:id;');
         $stm->execute([':id' => $id]);
@@ -28,6 +29,7 @@ class Reserva {
             return $result;
     }
 
+    //Obtenir les reserves d'un usuari
     public function getResData($id) {
         $stm = $this->sql->prepare("SELECT * FROM reserva WHERE idUsuari=:id;");
         $stm->execute([':id' => $id]);
@@ -40,6 +42,7 @@ class Reserva {
         }
     }
 
+    //Obtenir les reserves d'un usuari obertes
     public function getResDataObert($id) {
         $stm = $this->sql->prepare("SELECT * FROM reserva WHERE idUsuari=:id and estat = 'Obert';");
         $stm->execute([':id' => $id]);
@@ -52,6 +55,7 @@ class Reserva {
         }
     }
 
+    //Pujar les dades d'una reserva a la bdd
     public function reser($idUsuari, $aptId, $dataCancel, $preu, $FormatIniciReserva, $FormatFiReserva, $Estat){
         $stm = $this->sql->prepare('INSERT INTO reserva ( idApartament, idUsuari, DataMaximCancel, preu, diaEntrada, diaSortida, estat) VALUES (:idApartament, :idUsuari,:DataMaximCancel, :preu, :diaEntrada, :diaSortida, :estat)');
         $stm->execute([

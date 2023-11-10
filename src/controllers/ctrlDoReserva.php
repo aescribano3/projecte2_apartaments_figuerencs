@@ -2,7 +2,9 @@
 
     function ctrlDoReserva($request, $response, $container){
 
+        //Agafem la id del apartament que volem reservar
         $aptId = $_SESSION['AptIdMod'];
+        //I la del usuari que fa la reserva
         $idUsuari = $_SESSION["user"]["id"];
 
         $aptModel = $container->apartaments();
@@ -15,18 +17,20 @@
         $temps = $tempModel->getTempData($aptId);
 
        
-
+        //Guardem les dates de la reserva
         $iniciReserva = $request->get(INPUT_POST, "from");
         $fiReserva = $request->get(INPUT_POST, "to");
-        $correu = $request->get(INPUT_POST, "rsv-email");
 
+        //Guarden els preus i els dies maxims abans de cancelar del apartament
         $preuTA = $aptData["preuTA"];
         $preuTB = $aptData["preuTB"];
 
         $diaMaximCancel = $aptData["diaMaximCancel"];
 
+        //Calculem la data maxima per cancelar la reserva
         $dataCancel = date("Y-m-d", strtotime($iniciReserva . "-$diaMaximCancel days"));
 
+        //Formatem les dates per poder fer la resta
         $FormatIniciReserva = date("Y-m-d", strtotime($iniciReserva));
         $FormatFiReserva = date("Y-m-d", strtotime($fiReserva));
 
@@ -34,6 +38,7 @@
 
         $DiasDiff = floor($Diff / (60 * 60 * 24));
 
+        //Comprovem si la reserva es en temporada alta o baixa
         foreach ($temps as $tempr) {
             $fechaInicio = $tempr["dataInici"];
             $fechaFin = $tempr["dataFinal"];
@@ -45,17 +50,19 @@
                 $temp = "Alta";
             }
         }
-
+        //Calculem el preu de la reserva
         if($temp == "Baixa"){
             $preu = $preuTB * $DiasDiff;
         } else if ($temp == "Alta"){
             $preu = $preuTA * $DiasDiff;
         }
 
+        //El estat per defecte de la reserva es obert
         $Estat = "Obert";
 
         $resModel = $container->reserva();
 
+        //Fem la reserva i guardem la seva id
         $id = $resModel->reser($idUsuari, $aptId, $dataCancel, $preu, $FormatIniciReserva, $FormatFiReserva, $Estat);
 
         $id = intval($id); 

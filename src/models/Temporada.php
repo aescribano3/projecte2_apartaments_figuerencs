@@ -20,6 +20,7 @@ class Temporada {
         return $temporada;
     }
 
+    //Obtenir les temporades d'un apartament
     public function getTempData($id) {
         $stm = $this->sql->prepare("select * from temporada where idApartament=:id;");
         $stm->execute([':id' => $id]);
@@ -32,6 +33,7 @@ class Temporada {
         }
     }
 
+    //Pujar les temporades a la bdd
     public function upload($data_ini_alta, $data_fin_alta, $data_ini_baixa, $data_fin_baixa, $aptId) {
         $stm = $this->sql->prepare('INSERT INTO temporada ( idApartament, nom, dataInici, dataFinal) VALUES (:idApartament, :tipus, :datainici, :datafinal)');
         $stm->execute([

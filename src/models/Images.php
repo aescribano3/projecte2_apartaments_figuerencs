@@ -32,7 +32,7 @@ class Imatge {
         }
     }
     
-    
+    //Pujar imatges a la bdd
     public function upload($aptId, $imgPath) {
         $stm = $this->sql->prepare('INSERT INTO imgapartament (aptUrl, idApartament) VALUES (:aptUrl, :idApartament)');
         $stm->execute([

@@ -2,6 +2,7 @@
 
 function ctrlDoRegister($request, $response, $container){
 
+    //Guarden les dades del formulari
     $name = $request->get(INPUT_POST, "user-name");
     $lastname = $request->get(INPUT_POST, "user-lastname");
     $number = $request->get(INPUT_POST, "user-number");
@@ -13,6 +14,7 @@ function ctrlDoRegister($request, $response, $container){
 
     $userModel = $container->users();
 
+    //Cridem a la funció per registrar l'usuari
     $userModel = $userModel->register($name, $lastname, $number, $email, $pass, $confpass, $cv, $rol);
 
     if($userModel) {
