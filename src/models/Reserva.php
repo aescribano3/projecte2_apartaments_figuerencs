@@ -19,6 +19,14 @@ class Reserva {
 
         return $reserva;
     }
+    
+    public function getreserva($id){
+        $stm = $this->sql->prepare('select * from reserva where idReserva=:id;');
+        $stm->execute([':id' => $id]);
+        $result = $stm->fetch(\PDO::FETCH_ASSOC);
+
+            return $result;
+    }
 
     public function getResData($id) {
         $stm = $this->sql->prepare("SELECT * FROM reserva WHERE idUsuari=:id;");
@@ -55,5 +63,10 @@ class Reserva {
             ':diaSortida' => $FormatFiReserva,
             ':estat' => $Estat,
         ]);
+
+        // Obtener el ID de la reserva recién insertada
+        $idReserva = $this->sql->lastInsertId();
+
+        return $idReserva;
     }
 }

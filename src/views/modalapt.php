@@ -79,7 +79,7 @@
 
                 <div class="col-md-12">
                     <div class="sticky-top">
-                        <form action="/index.php?r=doreserva" method="POST">
+                        <form  method="POST">
                             <div class="row gx-5 gy-4 text-center justify-content-center m-3">
                                 <h4 class="">Reservar Apartament</h4>
                                 <div class="col-md-8 shadow-lg input-col">
@@ -92,7 +92,7 @@
                                     <label for="rsv-email">Correu Electronic</label>
                                     <input type="email" class="form-control-plaintext" name="rsv-email" id="rsv-email" placeholder="Email" required>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
+                                <button id="reservarButton" type="button" class="btn btn-primary btn-lg btn-block shadow-lg col-md-8">Reservar</button>
                             </div>
                         </form>   
                     </div>
@@ -103,3 +103,9 @@
         </div>
     </div>
 </div>
+<script src="/script/script.js"></script>
+
+
+
+
+
