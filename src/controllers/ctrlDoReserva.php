@@ -7,9 +7,14 @@
 
         $aptModel = $container->apartaments();
         $aptData = $aptModel->getAptData($aptId);
-        
+
+        $aptId = intval($aptId); 
+
+       
         $tempModel = $container->temporada();
         $temps = $tempModel->getTempData($aptId);
+
+       
 
         $iniciReserva = $request->get(INPUT_POST, "from");
         $fiReserva = $request->get(INPUT_POST, "to");
@@ -51,15 +56,16 @@
 
         $resModel = $container->reserva();
 
-        $resModel = $resModel->reser($idUsuari, $aptId, $dataCancel, $preu, $FormatIniciReserva, $FormatFiReserva, $Estat);
+        $id = $resModel->reser($idUsuari, $aptId, $dataCancel, $preu, $FormatIniciReserva, $FormatFiReserva, $Estat);
 
-        if($resModel) {
-            $response->redirect("location: /index.php");
-        } else {
-            $response->redirect("location: /index.php");
-        }
-
-        return $response;
-
+        $id = intval($id); 
         
+        $getreserva = $resModel->getreserva($id);
+
+        $response = json_encode($getreserva);
+
+        header('Content-Type: application/json');
+
+        echo($response);
+        die();   
     }

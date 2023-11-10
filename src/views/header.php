@@ -23,7 +23,7 @@
             <a class="dropdown-item" href="/index.php?r=register">Crear compta</a>
           <?php } ?>
           <a class="dropdown-item" href="/index.php?r=user">Perfil</a>
-          <a class="dropdown-item" href="/index.php?r=dologout">Tencar Sesió</a>
+          <a class="dropdown-item" href="/index.php?r=dologout">Tancar Sesió</a>
         </ul>
       </li>
     </ul>
